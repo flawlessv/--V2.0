@@ -8,10 +8,9 @@ const Login = memo(() => {
     dispatch(fetchCodeUrl())
   }, [])
   const dispatch = useDispatch()
-  const { codeImg } = useSelector(state => ({ codeImg: state.code.codeImg}))
   return (
     <LoginWrapper>
-      <LogForm codeImg={codeImg}></LogForm>
+      <LogForm></LogForm>
     </LoginWrapper>
   )
 })

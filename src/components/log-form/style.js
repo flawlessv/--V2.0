@@ -73,6 +73,12 @@ export const LoginWrapper = styled.div`
 	padding: 40px;
 	gap: 15px;
 }
+.container .drop .content .loginMethod{
+	width: 200px;
+	height: 120px;
+	background-color: pink;
+	border-radius: 74% 26% 42% 58% / 46% 81% 19% 54% ;
+}
 .container .drop .content h2 
 {
 	position: relative;
@@ -91,6 +97,9 @@ export const LoginWrapper = styled.div`
 	gap: 20px;
 	justify-content: center;
 	align-items: center;
+}
+.container .drop .content form .input-boxes{
+	display: flex;
 }
 .container .drop .content form .inputBox 
 {
@@ -134,7 +143,8 @@ export const LoginWrapper = styled.div`
 	letter-spacing: 0.1em;
 	font-weight: 500;
 }
-.container .drop .content form .inputBox:last-child 
+.container .drop .content form .inputBox:first-child,
+.container .drop .content form .inputBox:last-child
 {
 	width: 120px;
 	background: #ff0f5b;
@@ -143,6 +153,14 @@ export const LoginWrapper = styled.div`
 	15px 10px 15px rgba(0,0,0,0.025);
 	transition: 0.5s;
 }
+.container .drop .content form .inputBox:first-child{
+	width: 80px;
+	background-color: #19AF42;
+	margin-right: 10px;
+}
+.container .drop .content form .inputBox:first-child:hover{
+	width: 110px;
+} 
 .container .drop .content form .inputBox:last-child:hover 
 {
 	width: 150px;
