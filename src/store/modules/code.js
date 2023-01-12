@@ -1,19 +1,22 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { getCodeRequest, loginByUsername } from "../../services";
-export const fetchCodeUrl = createAsyncThunk('fetchCode', (payload, { dispatch }) => {
+import { getCodeRequest } from "../../services";
+export const fetchCodeUrlAction = createAsyncThunk('fetchCode', (payload, { dispatch }) => {
     getCodeRequest().then(res => dispatch(getCodeImg(res)))
-    // loginByUsername().then(res=>dispatch())
 })
 const codeSlice = createSlice({
     name: 'codeSlice',
     initialState: {
-        codeImg: ''
+        codeImg: {},
+        userInfo: {}
     },
     reducers: {
         getCodeImg(state, { payload }) {
             state.codeImg = payload
+        },
+        setUserInfo(state, { payload }) {
+            state.userInfo = payload
         }
     }
 })
-export const { getCodeImg } = codeSlice.actions
+export const { getCodeImg, setUserInfo } = codeSlice.actions
 export default codeSlice.reducer

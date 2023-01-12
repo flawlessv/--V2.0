@@ -44,11 +44,11 @@ export default function HeaderTabs() {
     return (
         <TabsWrapper>
 
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" className='tablist'>
-                    {
-                        tabDatas.map(item => <Tab label={item.name} className='tabs' onClick={() => handleTabsClick(item.path)} key={item.name} />)
-                    }
-                </Tabs>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" className='tablist'>
+                {
+                    tabDatas.map(item => <Tab label={item.name} className='tabs' onClick={() => handleTabsClick(item.path)} key={item.name} />)
+                }
+            </Tabs>
         </TabsWrapper>
     );
 }

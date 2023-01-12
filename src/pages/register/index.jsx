@@ -5,7 +5,7 @@ import { RegisterWrapper } from './style'
 const Register = memo(() => {
   return (
     <RegisterWrapper>
-      <LogForm title='注册' />
+      <LogForm isLogin={false} />
     </RegisterWrapper>
   )
 })

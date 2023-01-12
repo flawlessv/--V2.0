@@ -71,7 +71,7 @@ export const LoginWrapper = styled.div`
 	flex-direction: column;
 	text-align: center;
 	padding: 40px;
-	gap: 15px;
+	gap: 10px;
 }
 .container .drop .content .loginMethod{
 	width: 200px;
@@ -82,6 +82,7 @@ export const LoginWrapper = styled.div`
 .container .drop .content h2 
 {
 	position: relative;
+	margin-top: -18px;
 	color: #333;
 	font-size: 1.5em;	
 }
@@ -89,12 +90,14 @@ export const LoginWrapper = styled.div`
 	width: 100px;
 	margin-bottom: 8px;
 	margin-right: 6px;
+	cursor: pointer;
 }
 .container .drop .content form 
 {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	margin-top: -30px;
 	justify-content: center;
 	align-items: center;
 }
@@ -143,10 +146,9 @@ export const LoginWrapper = styled.div`
 	letter-spacing: 0.1em;
 	font-weight: 500;
 }
-.container .drop .content form .inputBox:first-child,
 .container .drop .content form .inputBox:last-child
 {
-	width: 120px;
+	width: 80px;
 	background: #ff0f5b;
 	box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
 	15px 15px 10px rgba(0,0,0,0.05),
@@ -154,17 +156,14 @@ export const LoginWrapper = styled.div`
 	transition: 0.5s;
 }
 .container .drop .content form .inputBox:first-child{
-	width: 80px;
+	width: 120px;
 	background-color: #19AF42;
 	margin-right: 10px;
 }
 .container .drop .content form .inputBox:first-child:hover{
-	width: 110px;
-} 
-.container .drop .content form .inputBox:last-child:hover 
-{
 	width: 150px;
-}
+} 
+
 .btns 
 {
 	position: absolute;
@@ -190,6 +189,16 @@ export const LoginWrapper = styled.div`
 	inset -10px -10px 15px rgba(255,255,255,0.5);
 	border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
 }
+ 
+	.change{
+		width: 90px;
+		height: 90px;
+		background-image: linear-gradient(25deg, #c3405f, #d87f8c, #e7b7bd, #f0f0f0);
+		bottom: 260px;
+		right: -100px;
+	}
+	
+
 .btns::before 
 {
 	content: '';

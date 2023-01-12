@@ -9,15 +9,19 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
-import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import { useSelector } from 'react-redux';
 const HeaderOpts = memo(() => {
     const navigate = useNavigate()
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const { avatar, userName } = useSelector(state => ({
+        avatar: state?.code?.userInfo?.avatar,
+        userName: state?.code?.userInfo?.userName
+    }))
     const open = Boolean(anchorEl);
+
     const handleClick = (event) => {
         console.log(event.currentTarget);
         setAnchorEl(event.currentTarget);
@@ -79,6 +83,9 @@ const HeaderOpts = memo(() => {
                     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                 >
+                    <MenuItem>
+                        <Avatar src='https://mui.com/static/images/avatar/1.jpg' /> {userName}
+                    </MenuItem>
                     <MenuItem>
                         <Avatar /> 个人中心
                     </MenuItem>

@@ -12,20 +12,22 @@ import MuiAlert from '@mui/material/Alert';
 import md5 from 'blueimp-md5';
 import { Link, useNavigate } from 'react-router-dom';
 import ForgetDialog from '@/pages/login/c-cpns/forget-pwd';
-import { getMobileCode, loginByUsername, registerByMobile } from '../../services';
-import axios from 'axios';
+import { getMobileCode, loginByMobile, loginByUsername, registerByMobile } from '../../services';
 import InputItem from './c-cpns/input-item';
 import PwdItem from './c-cpns/pwd-item';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUserInfo } from '../../store/modules/code';
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 const LogForm = memo((props) => {
   const { isLogin = true } = props
   const [pwdLogin, setPwdLogin] = useState(true)
+  const [alertMsg, setAlertMsg] = useState({})
   const [title, setTitle] = useState(isLogin ? '用户名登录' : '注册')
   const [open, setOpen] = useState(false);
-  // let title = isLogin ? '用户名登录' : '注册'
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   const userRef = useRef()
   const pwdRef = useRef()
   const phoneRef = useRef()
@@ -42,9 +44,6 @@ const LogForm = memo((props) => {
     reg_codeImg: /^-?[0-9]\d*$/,
     reg_codeMessage: /^[0-9]{4,4}$/,
   }
-  const handleClick = () => {
-    setOpen(true);
-  };
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -52,46 +51,89 @@ const LogForm = memo((props) => {
     setOpen(false);
   };
 
+
   // 改变登录方式
   const handleChangeLogin = () => {
     setPwdLogin(!pwdLogin)
     setTitle(pwdLogin ? '手机号登录' : '用户名登录')
-  }
-  //获取验证码
-  const handleGetValidCode = () => {
-    axios.get(`/api-send/sms?mobile=${phoneRef.current.value}`).then(res => console.log(res))
-    // setValidCode(true)
-    // setInterval(() => {
-    //   const newTime = messageTime - 1
-    //   setMessageTime(newTime)
-    //   console.log(messageTime);
-    //   messageTime === 0 && setValidCode(false)
-    // }, 1000);
-  }
 
+  }
+  //改变登录或注册
+  const changeLoginRegister = () => {
+    title === '注册' ? setTitle('用户名登录') : setTitle('注册')
+    navigate(title === '注册' ? '/login' : '/register')
+  }
+  //获取手机验证码
+  const handleGetValidCode = async () => {
+    const mobile = phoneRef.current.value
+    if (regs.reg_tel.test(mobile)) {
+      const res = await getMobileCode(mobile)
+      setAlertMsg({ msg: res.msg, success: true })
+      setOpen(true)
+    } else {
+      setAlertMsg({ msg: '手机号格式不正确', success: false })
+      setOpen(true)
+    }
+  }
   //表单提交
-  const handleFormSumbit = () => {
-    setOpen(true);
-    // console.log(phoneRef.current.value);
+  const handleFormSumbit = async () => {
+    console.log(title);
+    let res = ''
     // 通过用户名登录
-    loginByUsername({
-      username: userRef.current.value,
-      password: md5(pwdRef.current.value),
-      key: codeImg.data.key,
-      code: imgCodeRef.current.value
-    }).then(res => {
-      console.log(res.data);
-    })
+    if (title === '用户名登录') {
+      res = await loginByUsername({
+        username: userRef.current.value,
+        password: md5(pwdRef.current.value),
+        key: codeImg.data.key,
+        code: imgCodeRef.current.value
+      })
+    }
+
+    //通过手机号登录
+    if (title === '手机号登录') {
+      const mobile = phoneRef.current.value
+      const msgCode = msgCodeRef?.current.value
+      //检查手机号格式是否正确
+      if (!regs.reg_tel.test(mobile)) {
+        setAlertMsg({ msg: '手机号格式不正确', success: false })
+        setOpen(true)
+        return;
+      }
+      //检查手机验证码格式是否正确
+      if (!regs.reg_codeMessage.test(msgCode)) {
+        setAlertMsg({ msg: '手机验证码格式不正确', success: false })
+        setOpen(true)
+        return;
+      }
+      res = await loginByMobile({
+        mobile,
+        code: msgCode
+      })
+    }
+
     // 用户注册
-    /* console.log(codeRef.current.value);
-    registerByMobile({
-      mobile: phoneRef.current.value,
-      code: codeRef.current.value,
-      username: userRef.current.value,
-      password: pwdRef.current.value
-    }).then(res => {
-      console.log(res);
-    }) */
+    if (title === '注册') {
+      res = await registerByMobile({
+        mobile: phoneRef.current.value,
+        code: msgCodeRef.current.value,
+        username: userRef.current.value,
+        password: pwdRef.current.value
+      })
+      console.log(res, '注册');
+    }
+    //判断是否操作成功
+    if (res.code === 200) {
+      setAlertMsg({ msg: res.msg, success: true })
+      if (title !== '注册') {
+        dispatch(setUserInfo(res.data))
+      }
+    } else if (res.code === 400) {
+      setAlertMsg({ msg: res.msg, success: true })
+    } else {
+      setAlertMsg({ msg: res.response.data.msg, success: false })
+    }
+    setOpen(true);
+
   }
   return (
     <LoginWrapper>
@@ -109,9 +151,8 @@ const LogForm = memo((props) => {
             >
               {/* 表单 */}
               <FormControl sx={{ m: 0, width: '25ch' }} variant="standard">
-
                 {/* 手机号方式登录 */}
-                {title === '手机号登录' &&
+                {(title === '手机号登录' || title === '注册') &&
                   <Fragment>
                     {/* 手机号 */}
                     <InputItem label="手机号" reg={regs.reg_tel} ref={phoneRef} id="input-with-phone">
@@ -126,12 +167,24 @@ const LogForm = memo((props) => {
                       btn={true}
                     >
                       <CheckCircleIcon sx={{ color: 'action.active', mr: 0, my: 1 }} />
+                      <Button
+                        // disabled={validCode}
+                        onClick={() => handleGetValidCode()}
+                        sx={{
+                          position: 'absolute',
+                          top: 86,
+                          right: 5,
+                          fontSize: '12px',
+                          cursor: 'pointer',
+                          zIndex: '333'
+                        }}
+                      >
+                        获取验证码</Button>
                     </InputItem>
                   </Fragment>
                 }
-
                 {/* 账号密码方式登录 */}
-                {title === '用户名登录' &&
+                {(title === '用户名登录' || title === '注册') &&
                   < Fragment >
                     {/* 用户名 */}
                     <InputItem
@@ -141,10 +194,6 @@ const LogForm = memo((props) => {
                       id="input-with-user">
                       <AccountCircle sx={{ color: 'action.active', mr: 0, my: 1 }} />
                     </InputItem>
-                    {/* <div className="changeLoginMethods">
-                <button>Bubble</button>
-
-                </div> */}
                     {/* 密码 */}
                     <PwdItem
                       label="密码"
@@ -154,7 +203,7 @@ const LogForm = memo((props) => {
                     ><LockIcon sx={{ color: 'action.active', mr: 0, my: 1 }} />
                     </PwdItem>
                     {/* 图片验证码 */}
-                    <InputItem
+                    {title === '用户名登录' && <InputItem
                       label="图片验证码"
                       ref={imgCodeRef}
                       id="input-with-imgCode"
@@ -162,43 +211,43 @@ const LogForm = memo((props) => {
                       url={codeImg?.data?.codeUrl}
                     >
                       <CheckCircleIcon sx={{ color: 'action.active', mr: 0, my: 1 }} />
-                    </InputItem>
+                    </InputItem>}
                   </Fragment>}
               </FormControl>
               {/* 提交按钮 */}
               <div className="input-boxes">
                 <div className="inputBox">
-                  <Button variant="contained" className='subBtn' type='submit' onClick={handleFormSumbit}>
+                  <Button variant="contained" className='subBtn' type='submit' onClick={() => {
+                    handleFormSumbit()
+                  }}>
                     {title === '注册' ? title : '登录'}
                   </Button>
                 </div>
-                {/* 改变登录方式 */}
-                <div className="inputBox">
-                  <Button variant="contained" className='subBtn' type='submit' onClick={() => handleChangeLogin()}>
-                    {pwdLogin ? '手机号登录' : '用户名登录'}
-                  </Button>
-                </div>
               </div>
-              {/* <Link className="loginMethod" to={isLogin ? '/register' : '/login'}>{'手机号登录'}</Link> */}
+
             </Box>
           </div>
         </div>
         {/* 忘记密码 */}
-        {isLogin && <ForgetDialog></ForgetDialog>}
-        <Link className="btns signup" to={isLogin ? '/register' : '/login'}>
-          {isLogin ? '注册' : '登录'}
-        </Link>
+        {!(title === '注册') && <ForgetDialog></ForgetDialog>}
+        <div className="btns signup" onClick={() => changeLoginRegister()}>
+          {title === '注册' ? '登录' : '注册'}
+        </div>
+        {/* 改变登录或注册 */}
+        <div className="btns change" onClick={() => handleChangeLogin()}>
+          {pwdLogin ? '手机号登录' : '用户名登录'}
+        </div>
       </div >
-
       {/* 提示消息 */}
       <Snackbar open={open} autoHideDuration={2000} onClose={handleClose} anchorOrigin={{
         vertical: 'top',
         horizontal: 'center',
       }}>
-        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-          账号或密码错误!!
+        <Alert onClose={handleClose} severity={alertMsg.success ? "success" : "error"} sx={{ width: '100%' }}>
+          {alertMsg?.msg}
         </Alert>
       </Snackbar >
+
     </LoginWrapper >
   )
 })
