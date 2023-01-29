@@ -26,6 +26,7 @@ const InputItem = memo(forwardRef((props, ref) => {
                 label={label}
                 variant="standard"
                 error={inputErr}
+                color="secondary"
                 inputRef={ref}
                 onBlur={() => handleCheck()}
             />

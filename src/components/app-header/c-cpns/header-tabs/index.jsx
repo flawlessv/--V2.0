@@ -27,7 +27,7 @@ export default function HeaderTabs() {
         },
         {
             name: '简历定制',
-            path: '/guide'
+            path: '/customized'
         },
         {
             name: '求职攻略',
@@ -46,7 +46,10 @@ export default function HeaderTabs() {
 
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" className='tablist'>
                 {
-                    tabDatas.map(item => <Tab label={item.name} className='tabs' onClick={() => handleTabsClick(item.path)} key={item.name} />)
+                    tabDatas.map(item => (
+                        <Tab label={item.name} className='tabs' onClick={() => handleTabsClick(item.path)} key={item.name} />
+
+                    ))
                 }
             </Tabs>
         </TabsWrapper>

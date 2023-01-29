@@ -72,6 +72,12 @@ export const LoginWrapper = styled.div`
 	text-align: center;
 	padding: 40px;
 	gap: 10px;
+	.msgBtn{
+	&:disabled{
+		color: red;
+		cursor: not-allowed!important;
+	}
+}
 }
 .container .drop .content .loginMethod{
 	width: 200px;
@@ -189,7 +195,6 @@ export const LoginWrapper = styled.div`
 	inset -10px -10px 15px rgba(255,255,255,0.5);
 	border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
 }
- 
 	.change{
 		width: 90px;
 		height: 90px;
@@ -234,4 +239,5 @@ export const LoginWrapper = styled.div`
 {
 	border-radius: 50%;
 }
+
 `

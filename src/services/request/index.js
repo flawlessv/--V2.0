@@ -1,11 +1,23 @@
 import axios from "axios";
-import { BASE_URL, TIME_OUT, CODE_HEADER } from "./config";
+import { BASE_URL, TIME_OUT, AUTHORIZATION } from "./config";
+import { getToken, isLogined } from '@/utils/auth'
 class HYRequest {
     constructor(baseURL, timeout) {
         this.instance = axios.create({
             baseURL, timeout
         })
+
+        this.instance.interceptors.request.use(config => {
+            if (isLogined()) {
+                console.log('isLogined');
+                config.headers.Authorization = getToken()
+                console.log(config, 'request');
+            }
+            return config
+        }, err => err)
+
         this.instance.interceptors.response.use(res => {
+            console.log(res);
             return res.data
         }, err => err)
     }
@@ -17,19 +29,14 @@ class HYRequest {
             ...config,
             method: 'get',
             headers: {
-                Authorization: CODE_HEADER
+                Authorization: AUTHORIZATION
             }
         })
     }
     post(config) {
-        console.log(config,'config');
-        console.log(config.key,'configKey');
+        console.log(config, 'config');
         return this.request({
-            ...config, method: 'post', headers: {
-                Authorization: CODE_HEADER,
-                key: config.data.key,
-                code: config.data.code
-            }
+            ...config, method: 'post',
         })
     }
 }

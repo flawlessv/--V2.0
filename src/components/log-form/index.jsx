@@ -10,13 +10,14 @@ import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import md5 from 'blueimp-md5';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ForgetDialog from '@/pages/login/c-cpns/forget-pwd';
 import { getMobileCode, loginByMobile, loginByUsername, registerByMobile } from '../../services';
 import InputItem from './c-cpns/input-item';
 import PwdItem from './c-cpns/pwd-item';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUserInfo } from '../../store/modules/code';
+import { setToken, isLogined } from '@/utils/auth.js'
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -26,6 +27,8 @@ const LogForm = memo((props) => {
   const [alertMsg, setAlertMsg] = useState({})
   const [title, setTitle] = useState(isLogin ? '用户名登录' : '注册')
   const [open, setOpen] = useState(false);
+  const timerCount = 60 // 默认60秒
+  const [btnSecond, setBtnSecond] = useState(timerCount);
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const userRef = useRef()
@@ -33,8 +36,16 @@ const LogForm = memo((props) => {
   const phoneRef = useRef()
   const imgCodeRef = useRef()
   const msgCodeRef = useRef()
+  const timerRef = useRef(null) // 记录时间的定时器
+  useEffect(() => {
+    if (btnSecond === 0) {
+      clearInterval(timerRef.current) // 清空定时器
+      setBtnSecond(timerCount) // 重新将技术器设置为60秒
+    }
+  }, [btnSecond])
   // 图片验证码的图片
   const { codeImg } = useSelector(state => ({ codeImg: state.code.codeImg }))
+
   //验证表单的正则表达式
   const regs =
   {
@@ -63,17 +74,26 @@ const LogForm = memo((props) => {
     title === '注册' ? setTitle('用户名登录') : setTitle('注册')
     navigate(title === '注册' ? '/login' : '/register')
   }
+  // 倒计时函数
+  const cutCount = () => {
+    setBtnSecond((prevState) => prevState - 1)
+    // 为什么这里要用函数- 如果用count 发现count闭包了 不会发生变化了
+  }
+
   //获取手机验证码
   const handleGetValidCode = async () => {
+
     const mobile = phoneRef.current.value
     if (regs.reg_tel.test(mobile)) {
+      cutCount()
+      timerRef.current = setInterval(cutCount, 1000)
       const res = await getMobileCode(mobile)
       setAlertMsg({ msg: res.msg, success: true })
-      setOpen(true)
     } else {
       setAlertMsg({ msg: '手机号格式不正确', success: false })
-      setOpen(true)
     }
+    setOpen(true)
+
   }
   //表单提交
   const handleFormSumbit = async () => {
@@ -87,6 +107,8 @@ const LogForm = memo((props) => {
         key: codeImg.data.key,
         code: imgCodeRef.current.value
       })
+      console.log(res?.data?.accessToken);
+
     }
 
     //通过手机号登录
@@ -109,6 +131,7 @@ const LogForm = memo((props) => {
         mobile,
         code: msgCode
       })
+
     }
 
     // 用户注册
@@ -119,12 +142,13 @@ const LogForm = memo((props) => {
         username: userRef.current.value,
         password: pwdRef.current.value
       })
-      console.log(res, '注册');
     }
     //判断是否操作成功
     if (res.code === 200) {
       setAlertMsg({ msg: res.msg, success: true })
       if (title !== '注册') {
+        const token = res.data.accessToken
+        setToken(token)
         dispatch(setUserInfo(res.data))
       }
     } else if (res.code === 400) {
@@ -164,22 +188,24 @@ const LogForm = memo((props) => {
                       ref={msgCodeRef}
                       id="input-with-msgCode"
                       reg={regs.reg_codeMessage}
-                      btn={true}
                     >
                       <CheckCircleIcon sx={{ color: 'action.active', mr: 0, my: 1 }} />
                       <Button
                         // disabled={validCode}
                         onClick={() => handleGetValidCode()}
+                        disabled={btnSecond !== timerCount}
+                        className='msgBtn'
                         sx={{
                           position: 'absolute',
                           top: 86,
                           right: 5,
                           fontSize: '12px',
                           cursor: 'pointer',
-                          zIndex: '333'
+                          zIndex: '333',
+                          color: '#144fff'
                         }}
                       >
-                        获取验证码</Button>
+                        {btnSecond === timerCount ? '获取验证码' : btnSecond + 's'}</Button>
                     </InputItem>
                   </Fragment>
                 }
@@ -217,7 +243,7 @@ const LogForm = memo((props) => {
               {/* 提交按钮 */}
               <div className="input-boxes">
                 <div className="inputBox">
-                  <Button variant="contained" className='subBtn' type='submit' onClick={() => {
+                  <Button variant="contained" className='subBtn' onClick={() => {
                     handleFormSumbit()
                   }}>
                     {title === '注册' ? title : '登录'}

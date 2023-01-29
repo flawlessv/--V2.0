@@ -28,6 +28,7 @@ const PwdItem = memo(forwardRef((props, ref) => {
                 variant="standard"
                 error={inputErr}
                 inputRef={ref}
+                color='secondary'
                 type={showPassword ? 'text' : 'password'}
                 onBlur={() => handleCheck()}
             />

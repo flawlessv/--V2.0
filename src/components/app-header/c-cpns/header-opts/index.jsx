@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import { OptsWrapper } from './style'
-import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -13,6 +12,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import { useSelector } from 'react-redux';
+import { isLogined } from '@/utils/auth';
 const HeaderOpts = memo(() => {
     const navigate = useNavigate()
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -21,9 +21,7 @@ const HeaderOpts = memo(() => {
         userName: state?.code?.userInfo?.userName
     }))
     const open = Boolean(anchorEl);
-
     const handleClick = (event) => {
-        console.log(event.currentTarget);
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
@@ -31,22 +29,23 @@ const HeaderOpts = memo(() => {
     };
     return (
         <OptsWrapper>
-
             <React.Fragment>
-                <Box sx={{ display: 'flex', alignItems: 'flex-end', textAlign: 'center' }}>
-                    <Button className='optBtn' variant="contained" onClick={() => navigate('/login')}>登录/注册</Button>
-                    <Tooltip title="Account settings">
-                        <IconButton
-                            onClick={handleClick}
-                            size="small"
-                            sx={{ ml: 40 }}
-                            aria-controls={open ? 'account-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open ? 'true' : undefined}
-                        >
-                            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
-                        </IconButton>
-                    </Tooltip>
+                <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                    {!isLogined() ?
+                        <button className='optBtn' onClick={() => navigate('/login')}>登录/注册</button>
+                        : <Tooltip title="Account settings">
+                            <IconButton
+                                onClick={handleClick}
+                                size="small"
+                                sx={{ ml: 40 }}
+                                aria-controls={open ? 'account-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open ? 'true' : undefined}
+                            >
+                                <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+                            </IconButton>
+                        </Tooltip>
+                    }
                 </Box>
                 <Menu
                     anchorEl={anchorEl}

@@ -5,6 +5,7 @@ const Login = React.lazy(() => import('../pages/login'))
 const Register = React.lazy(() => import('../pages/register'))
 const ResumeService = React.lazy(() => import('../pages/resume-service'))
 const TemplateList = React.lazy(() => import('../pages/template-list'))
+const ResumeCustomized = React.lazy(() => import('../pages/resume-dingzhi'))
 const routes = [
     {
         path: '/home',
@@ -25,6 +26,10 @@ const routes = [
     {
         path: '/resumes',
         element: <TemplateList />
+    },
+    {
+        path: '/customized',
+        element: <ResumeCustomized />
     },
     {
         path: '/',
