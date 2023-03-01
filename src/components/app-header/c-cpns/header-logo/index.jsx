@@ -6,7 +6,7 @@ const HeaderLogo = memo(() => {
     const navigate=useNavigate()
     return (
         <LogoWrapper>
-            <img src={logoImg} alt="在线简历服务平台" onClick={()=>navigate('/home')}/>
+            <img src={logoImg} alt="在线简历服务平台" onClick={()=>navigate('/')}/>
         </LogoWrapper>
     )
 })

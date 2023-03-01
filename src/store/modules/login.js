@@ -11,7 +11,7 @@ const loginSlice = createSlice({
     },
     reducers: {
         setUserInfo(state, { payload }) {
-            console.log(payload);
+            // console.log(payload);
             state.userInfo = payload
         }
     }

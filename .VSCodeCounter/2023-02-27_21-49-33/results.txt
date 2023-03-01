@@ -1,0 +1,314 @@
+Date : 2023-02-27 21:49:33
+Directory : q:\React项目合集(已做)\onresume
+Total : 165 files,  39376 codes, 252 comments, 503 blanks, all 40131 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JSON           |          2 |     32,336 |          0 |          2 |     32,338 |
+| JavaScript JSX |         78 |      3,870 |        125 |        257 |      4,252 |
+| JavaScript     |         79 |      3,091 |        122 |        235 |      3,448 |
+| CSS            |          4 |         40 |          5 |          7 |         52 |
+| Markdown       |          1 |         20 |          0 |          0 |         20 |
+| HTML           |          1 |         19 |          0 |          2 |         21 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                            | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                               |        165 |     39,376 |        252 |        503 |     40,131 |
+| . (Files)                                                                                                       |          4 |     32,364 |          1 |          2 |     32,367 |
+| public                                                                                                          |          1 |         19 |          0 |          2 |         21 |
+| src                                                                                                             |        160 |      6,993 |        251 |        499 |      7,743 |
+| src (Files)                                                                                                     |          3 |         49 |          0 |          6 |         55 |
+| src\assets                                                                                                      |          5 |        291 |          5 |         19 |        315 |
+| src\assets\css                                                                                                  |          1 |         23 |          5 |          4 |         32 |
+| src\assets\data                                                                                                 |          3 |        162 |          0 |          3 |        165 |
+| src\assets\theme                                                                                                |          1 |        106 |          0 |         12 |        118 |
+| src\base-ui                                                                                                     |          3 |         41 |          1 |          2 |         44 |
+| src\base-ui\Loading                                                                                             |          1 |         15 |          0 |          0 |         15 |
+| src\base-ui\backTop                                                                                             |          2 |         26 |          1 |          2 |         29 |
+| src\components                                                                                                  |         45 |      2,331 |         80 |        154 |      2,565 |
+| src\components\app-footer                                                                                       |          2 |        111 |          6 |          6 |        123 |
+| src\components\app-header                                                                                       |          8 |        341 |         13 |         31 |        385 |
+| src\components\app-header (Files)                                                                               |          2 |         59 |          1 |          5 |         65 |
+| src\components\app-header\c-cpns                                                                                |          6 |        282 |         12 |         26 |        320 |
+| src\components\app-header\c-cpns\header-logo                                                                    |          2 |         25 |          1 |          2 |         28 |
+| src\components\app-header\c-cpns\header-opts                                                                    |          2 |        173 |          2 |         11 |        186 |
+| src\components\app-header\c-cpns\header-tabs                                                                    |          2 |         84 |          9 |         13 |        106 |
+| src\components\log-form                                                                                         |          6 |        615 |         52 |         23 |        690 |
+| src\components\log-form (Files)                                                                                 |          2 |        492 |         34 |         11 |        537 |
+| src\components\log-form\c-cpns                                                                                  |          4 |        123 |         18 |         12 |        153 |
+| src\components\log-form\c-cpns\input-item                                                                       |          2 |         39 |          2 |          4 |         45 |
+| src\components\log-form\c-cpns\mobile-log                                                                       |          1 |         36 |         14 |          6 |         56 |
+| src\components\log-form\c-cpns\pwd-item                                                                         |          1 |         48 |          2 |          2 |         52 |
+| src\components\my-tabs                                                                                          |          2 |        155 |          1 |          9 |        165 |
+| src\components\resume-info                                                                                      |         20 |        596 |          4 |         54 |        654 |
+| src\components\resume-info\c-cpns                                                                               |         20 |        596 |          4 |         54 |        654 |
+| src\components\resume-info\c-cpns\certificateHonor                                                              |          2 |         45 |          0 |          5 |         50 |
+| src\components\resume-info\c-cpns\job-intent                                                                    |          1 |          9 |          0 |          3 |         12 |
+| src\components\resume-info\c-cpns\project-expe                                                                  |          2 |         21 |          0 |          5 |         26 |
+| src\components\resume-info\c-cpns\resume-content                                                                |          2 |        111 |          0 |          7 |        118 |
+| src\components\resume-info\c-cpns\resume-title                                                                  |          2 |         45 |          0 |          6 |         51 |
+| src\components\resume-info\c-cpns\school-expe                                                                   |          2 |         21 |          0 |          5 |         26 |
+| src\components\resume-info\c-cpns\selfEvaluation                                                                |          2 |         45 |          0 |          5 |         50 |
+| src\components\resume-info\c-cpns\skillSpecialties                                                              |          2 |         45 |          0 |          5 |         50 |
+| src\components\resume-info\c-cpns\user-info                                                                     |          3 |        235 |          4 |          8 |        247 |
+| src\components\resume-info\c-cpns\user-info (Files)                                                             |          2 |        163 |          2 |          6 |        171 |
+| src\components\resume-info\c-cpns\user-info\c-cpns                                                              |          1 |         72 |          2 |          2 |         76 |
+| src\components\resume-info\c-cpns\user-info\c-cpns\Avatar                                                       |          1 |         72 |          2 |          2 |         76 |
+| src\components\resume-info\c-cpns\work-expe                                                                     |          2 |         19 |          0 |          5 |         24 |
+| src\components\resume-message                                                                                   |          1 |         29 |          1 |          4 |         34 |
+| src\components\resume-team                                                                                      |          2 |        174 |          1 |         13 |        188 |
+| src\components\resumeImg-item                                                                                   |          2 |         10 |          0 |          7 |         17 |
+| src\components\serviceSetion                                                                                    |          2 |        300 |          2 |          7 |        309 |
+| src\hooks                                                                                                       |          2 |         18 |          0 |          2 |         20 |
+| src\pages                                                                                                       |         84 |      3,660 |        102 |        291 |      4,053 |
+| src\pages\home                                                                                                  |         16 |        569 |         24 |         59 |        652 |
+| src\pages\home (Files)                                                                                          |          2 |        106 |          1 |          5 |        112 |
+| src\pages\home\c-cpns                                                                                           |         14 |        463 |         23 |         54 |        540 |
+| src\pages\home\c-cpns\home-banner                                                                               |          2 |         64 |          2 |          7 |         73 |
+| src\pages\home\c-cpns\home-charact                                                                              |          2 |         52 |          0 |          6 |         58 |
+| src\pages\home\c-cpns\home-hotTemplate                                                                          |          5 |        267 |         12 |         30 |        309 |
+| src\pages\home\c-cpns\home-hotTemplate (Files)                                                                  |          2 |        153 |          2 |         20 |        175 |
+| src\pages\home\c-cpns\home-hotTemplate\c-cpns                                                                   |          3 |        114 |         10 |         10 |        134 |
+| src\pages\home\c-cpns\home-hotTemplate\c-cpns\hot-resume                                                        |          2 |        100 |         10 |          6 |        116 |
+| src\pages\home\c-cpns\home-hotTemplate\c-cpns\hot-title                                                         |          1 |         14 |          0 |          4 |         18 |
+| src\pages\home\c-cpns\home-resumeImg                                                                            |          1 |         12 |          0 |          3 |         15 |
+| src\pages\home\c-cpns\home-service                                                                              |          2 |         24 |          6 |          4 |         34 |
+| src\pages\home\c-cpns\home-slide                                                                                |          2 |         44 |          3 |          4 |         51 |
+| src\pages\login                                                                                                 |          4 |        132 |          1 |          8 |        141 |
+| src\pages\login (Files)                                                                                         |          2 |         23 |          1 |          3 |         27 |
+| src\pages\login\c-cpns                                                                                          |          2 |        109 |          0 |          5 |        114 |
+| src\pages\login\c-cpns\forget-pwd                                                                               |          2 |        109 |          0 |          5 |        114 |
+| src\pages\my                                                                                                    |          9 |        523 |         16 |         25 |        564 |
+| src\pages\my (Files)                                                                                            |          2 |         24 |          0 |          5 |         29 |
+| src\pages\my\c-cpns                                                                                             |          7 |        499 |         16 |         20 |        535 |
+| src\pages\my\c-cpns\my-info                                                                                     |          2 |         82 |          4 |          4 |         90 |
+| src\pages\my\c-cpns\my-order                                                                                    |          1 |        218 |         11 |          6 |        235 |
+| src\pages\my\c-cpns\my-resume                                                                                   |          2 |        187 |          1 |          5 |        193 |
+| src\pages\my\c-cpns\popularize                                                                                  |          1 |          7 |          0 |          2 |          9 |
+| src\pages\my\c-cpns\upload-template                                                                             |          1 |          5 |          0 |          3 |          8 |
+| src\pages\register                                                                                              |          2 |         14 |          0 |          4 |         18 |
+| src\pages\resume-bottomTab                                                                                      |          2 |        158 |         16 |          9 |        183 |
+| src\pages\resume-details                                                                                        |         30 |      1,043 |         27 |         96 |      1,166 |
+| src\pages\resume-details (Files)                                                                                |          2 |         21 |          3 |          4 |         28 |
+| src\pages\resume-details\c-cpns                                                                                 |         28 |      1,022 |         24 |         92 |      1,138 |
+| src\pages\resume-details\c-cpns\drawer-tabs                                                                     |          1 |        106 |          2 |          5 |        113 |
+| src\pages\resume-details\c-cpns\resume-helpOpt                                                                  |          2 |        149 |          1 |         14 |        164 |
+| src\pages\resume-details\c-cpns\resume-helper                                                                   |          2 |         81 |          1 |         12 |         94 |
+| src\pages\resume-details\c-cpns\resume-main                                                                     |          2 |        107 |          9 |         10 |        126 |
+| src\pages\resume-details\c-cpns\resume-tabPanel                                                                 |         21 |        579 |         11 |         51 |        641 |
+| src\pages\resume-details\c-cpns\resume-tabPanel (Files)                                                         |          1 |         27 |          0 |          3 |         30 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns                                                          |         20 |        552 |         11 |         48 |        611 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\basicInfoTab                                             |          2 |        170 |          8 |          6 |        184 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\campusExperienceTab                                      |          2 |         51 |          0 |          4 |         55 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\certificateHonorTab                                      |          1 |         11 |          0 |          3 |         14 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\editor-inputs                                            |          2 |         44 |          0 |          7 |         51 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\jobIntentTab                                             |          2 |         52 |          1 |          7 |         60 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\projectExperienceTab                                     |          2 |         51 |          0 |          3 |         54 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\selfEvaluationTab                                        |          1 |         11 |          0 |          2 |         13 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\skillSpecialtiesTab                                      |          1 |         12 |          0 |          4 |         16 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-Editor                                               |          2 |         61 |          1 |          4 |         66 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-date                                                 |          2 |         16 |          0 |          2 |         18 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-input                                                |          1 |         38 |          1 |          2 |         41 |
+| src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\workExperienceTab                                        |          2 |         35 |          0 |          4 |         39 |
+| src\pages\resume-service                                                                                        |         19 |      1,087 |         17 |         84 |      1,188 |
+| src\pages\resume-service (Files)                                                                                |          2 |         24 |          0 |          4 |         28 |
+| src\pages\resume-service\c-cpns                                                                                 |         17 |      1,063 |         17 |         80 |      1,160 |
+| src\pages\resume-service\c-cpns\s-banner                                                                        |          2 |         65 |          0 |          8 |         73 |
+| src\pages\resume-service\c-cpns\s-case                                                                          |          2 |         91 |          0 |          6 |         97 |
+| src\pages\resume-service\c-cpns\s-optimize                                                                      |          2 |         84 |          0 |          4 |         88 |
+| src\pages\resume-service\c-cpns\s-order                                                                         |          7 |        610 |         17 |         49 |        676 |
+| src\pages\resume-service\c-cpns\s-order (Files)                                                                 |          1 |         54 |          0 |          4 |         58 |
+| src\pages\resume-service\c-cpns\s-order\c-cpns                                                                  |          6 |        556 |         17 |         45 |        618 |
+| src\pages\resume-service\c-cpns\s-order\c-cpns\order-card                                                       |          2 |        137 |          1 |         15 |        153 |
+| src\pages\resume-service\c-cpns\s-order\c-cpns\order-payCard                                                    |          2 |        176 |          9 |         18 |        203 |
+| src\pages\resume-service\c-cpns\s-order\c-cpns\order-steps                                                      |          2 |        243 |          7 |         12 |        262 |
+| src\pages\resume-service\c-cpns\s-step                                                                          |          2 |        159 |          0 |          7 |        166 |
+| src\pages\resume-service\c-cpns\s-team                                                                          |          2 |         54 |          0 |          6 |         60 |
+| src\pages\template-list                                                                                         |          2 |        134 |          1 |          6 |        141 |
+| src\routers                                                                                                     |          1 |         75 |          8 |          1 |         84 |
+| src\services                                                                                                    |          6 |        175 |         14 |         10 |        199 |
+| src\services (Files)                                                                                            |          1 |          3 |          0 |          0 |          3 |
+| src\services\modules                                                                                            |          3 |        112 |         11 |          6 |        129 |
+| src\services\request                                                                                            |          2 |         60 |          3 |          4 |         67 |
+| src\store                                                                                                       |          8 |        289 |         15 |          6 |        310 |
+| src\store (Files)                                                                                               |          1 |         16 |          0 |          1 |         17 |
+| src\store\modules                                                                                               |          7 |        273 |         15 |          5 |        293 |
+| src\utils                                                                                                       |          3 |         64 |         26 |          8 |         98 |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                        | language       | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| q:\React项目合集(已做)\onresume\README.md                                                                             | Markdown       |         20 |          0 |          0 |         20 |
+| q:\React项目合集(已做)\onresume\craco.config.js                                                                       | JavaScript     |          8 |          1 |          0 |          9 |
+| q:\React项目合集(已做)\onresume\package-lock.json                                                                     | JSON           |     32,271 |          0 |          1 |     32,272 |
+| q:\React项目合集(已做)\onresume\package.json                                                                          | JSON           |         65 |          0 |          1 |         66 |
+| q:\React项目合集(已做)\onresume\public\index.html                                                                     | HTML           |         19 |          0 |          2 |         21 |
+| q:\React项目合集(已做)\onresume\src\App.css                                                                           | CSS            |          7 |          0 |          2 |          9 |
+| q:\React项目合集(已做)\onresume\src\App.jsx                                                                           | JavaScript JSX |         19 |          0 |          2 |         21 |
+| q:\React项目合集(已做)\onresume\src\assets\css\base.css                                                               | CSS            |         23 |          5 |          4 |         32 |
+| q:\React项目合集(已做)\onresume\src\assets\data\resumeInfo copy.js                                                    | JavaScript     |         53 |          0 |          1 |         54 |
+| q:\React项目合集(已做)\onresume\src\assets\data\resumeInfo.js                                                         | JavaScript     |         55 |          0 |          1 |         56 |
+| q:\React项目合集(已做)\onresume\src\assets\data\resumeService.js                                                      | JavaScript     |         54 |          0 |          1 |         55 |
+| q:\React项目合集(已做)\onresume\src\assets\theme\index.js                                                             | JavaScript     |        106 |          0 |         12 |        118 |
+| q:\React项目合集(已做)\onresume\src\base-ui\Loading\index.jsx                                                         | JavaScript JSX |         15 |          0 |          0 |         15 |
+| q:\React项目合集(已做)\onresume\src\base-ui\backTop\index.jsx                                                         | JavaScript JSX |         21 |          0 |          1 |         22 |
+| q:\React项目合集(已做)\onresume\src\base-ui\backTop\style.js                                                          | JavaScript     |          5 |          1 |          1 |          7 |
+| q:\React项目合集(已做)\onresume\src\components\app-footer\index.jsx                                                   | JavaScript JSX |         58 |          5 |          4 |         67 |
+| q:\React项目合集(已做)\onresume\src\components\app-footer\style.js                                                    | JavaScript     |         53 |          1 |          2 |         56 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-logo\index.jsx                                | JavaScript JSX |         13 |          0 |          1 |         14 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-logo\style.js                                 | JavaScript     |         12 |          1 |          1 |         14 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-opts\index.jsx                                | JavaScript JSX |        126 |          0 |          2 |        128 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-opts\style.js                                 | JavaScript     |         47 |          2 |          9 |         58 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-tabs\index.jsx                                | JavaScript JSX |         53 |          0 |          4 |         57 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-tabs\style.js                                 | JavaScript     |         31 |          9 |          9 |         49 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\index.jsx                                                   | JavaScript JSX |         30 |          1 |          2 |         33 |
+| q:\React项目合集(已做)\onresume\src\components\app-header\style.js                                                    | JavaScript     |         29 |          0 |          3 |         32 |
+| q:\React项目合集(已做)\onresume\src\components\log-form\c-cpns\input-item\index.jsx                                   | JavaScript JSX |         39 |          2 |          3 |         44 |
+| q:\React项目合集(已做)\onresume\src\components\log-form\c-cpns\input-item\style.js                                    | JavaScript     |          0 |          0 |          1 |          1 |
+| q:\React项目合集(已做)\onresume\src\components\log-form\c-cpns\mobile-log\index.jsx                                   | JavaScript JSX |         36 |         14 |          6 |         56 |
+| q:\React项目合集(已做)\onresume\src\components\log-form\c-cpns\pwd-item\index.jsx                                     | JavaScript JSX |         48 |          2 |          2 |         52 |
+| q:\React项目合集(已做)\onresume\src\components\log-form\index.jsx                                                     | JavaScript JSX |        275 |         28 |          7 |        310 |
+| q:\React项目合集(已做)\onresume\src\components\log-form\style.js                                                      | JavaScript     |        217 |          6 |          4 |        227 |
+| q:\React项目合集(已做)\onresume\src\components\my-tabs\index.jsx                                                      | JavaScript JSX |        125 |          1 |          6 |        132 |
+| q:\React项目合集(已做)\onresume\src\components\my-tabs\style.js                                                       | JavaScript     |         30 |          0 |          3 |         33 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\certificateHonor\index.jsx                          | JavaScript JSX |         19 |          0 |          3 |         22 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\certificateHonor\style.js                           | JavaScript     |         26 |          0 |          2 |         28 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\job-intent\index.jsx                                | JavaScript JSX |          9 |          0 |          3 |         12 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\project-expe\index.jsx                              | JavaScript JSX |         17 |          0 |          3 |         20 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\project-expe\style.js                               | JavaScript     |          4 |          0 |          2 |          6 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-content\index.jsx                            | JavaScript JSX |         49 |          0 |          5 |         54 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-content\style.js                             | JavaScript     |         62 |          0 |          2 |         64 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-title\index.jsx                              | JavaScript JSX |         13 |          0 |          4 |         17 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-title\style.js                               | JavaScript     |         32 |          0 |          2 |         34 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\school-expe\index.jsx                               | JavaScript JSX |         17 |          0 |          3 |         20 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\school-expe\style.js                                | JavaScript     |          4 |          0 |          2 |          6 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\selfEvaluation\index.jsx                            | JavaScript JSX |         19 |          0 |          3 |         22 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\selfEvaluation\style.js                             | JavaScript     |         26 |          0 |          2 |         28 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\skillSpecialties\index.jsx                          | JavaScript JSX |         19 |          0 |          3 |         22 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\skillSpecialties\style.js                           | JavaScript     |         26 |          0 |          2 |         28 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\user-info\c-cpns\Avatar\index.jsx                   | JavaScript JSX |         72 |          2 |          2 |         76 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\user-info\index.jsx                                 | JavaScript JSX |         37 |          2 |          3 |         42 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\user-info\style.js                                  | JavaScript     |        126 |          0 |          3 |        129 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\work-expe\index.jsx                                 | JavaScript JSX |         17 |          0 |          3 |         20 |
+| q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\work-expe\style.js                                  | JavaScript     |          2 |          0 |          2 |          4 |
+| q:\React项目合集(已做)\onresume\src\components\resume-message\index.jsx                                               | JavaScript JSX |         29 |          1 |          4 |         34 |
+| q:\React项目合集(已做)\onresume\src\components\resume-team\index.jsx                                                  | JavaScript JSX |         94 |          1 |          3 |         98 |
+| q:\React项目合集(已做)\onresume\src\components\resume-team\style.js                                                   | JavaScript     |         80 |          0 |         10 |         90 |
+| q:\React项目合集(已做)\onresume\src\components\resumeImg-item\index.jsx                                               | JavaScript JSX |          7 |          0 |          4 |         11 |
+| q:\React项目合集(已做)\onresume\src\components\resumeImg-item\style.js                                                | JavaScript     |          3 |          0 |          3 |          6 |
+| q:\React项目合集(已做)\onresume\src\components\serviceSetion\index.jsx                                                | JavaScript JSX |         68 |          2 |          3 |         73 |
+| q:\React项目合集(已做)\onresume\src\components\serviceSetion\style.js                                                 | JavaScript     |        232 |          0 |          4 |        236 |
+| q:\React项目合集(已做)\onresume\src\hooks\useOrder.jsx                                                                | JavaScript JSX |          9 |          0 |          1 |         10 |
+| q:\React项目合集(已做)\onresume\src\hooks\useSetTime.jsx                                                              | JavaScript JSX |          9 |          0 |          1 |         10 |
+| q:\React项目合集(已做)\onresume\src\index.js                                                                          | JavaScript     |         23 |          0 |          2 |         25 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-banner\index.jsx                                           | JavaScript JSX |         21 |          1 |          4 |         26 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-banner\style.js                                            | JavaScript     |         43 |          1 |          3 |         47 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-charact\index.jsx                                          | JavaScript JSX |         17 |          0 |          4 |         21 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-charact\style.js                                           | JavaScript     |         35 |          0 |          2 |         37 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-hotTemplate\c-cpns\hot-resume\index.jsx                    | JavaScript JSX |         49 |          0 |          3 |         52 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-hotTemplate\c-cpns\hot-resume\style.js                     | JavaScript     |         51 |         10 |          3 |         64 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-hotTemplate\c-cpns\hot-title\index.jsx                     | JavaScript JSX |         14 |          0 |          4 |         18 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-hotTemplate\index.jsx                                      | JavaScript JSX |         40 |          1 |          4 |         45 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-hotTemplate\style.js                                       | JavaScript     |        113 |          1 |         16 |        130 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-resumeImg\index.jsx                                        | JavaScript JSX |         12 |          0 |          3 |         15 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-service\index.jsx                                          | JavaScript JSX |         18 |          0 |          2 |         20 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-service\style.js                                           | JavaScript     |          6 |          6 |          2 |         14 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-slide\index.jsx                                            | JavaScript JSX |         28 |          0 |          2 |         30 |
+| q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-slide\style.js                                             | JavaScript     |         16 |          3 |          2 |         21 |
+| q:\React项目合集(已做)\onresume\src\pages\home\index.jsx                                                              | JavaScript JSX |         87 |          1 |          3 |         91 |
+| q:\React项目合集(已做)\onresume\src\pages\home\style.js                                                               | JavaScript     |         19 |          0 |          2 |         21 |
+| q:\React项目合集(已做)\onresume\src\pages\login\c-cpns\forget-pwd\index.jsx                                           | JavaScript JSX |         46 |          0 |          4 |         50 |
+| q:\React项目合集(已做)\onresume\src\pages\login\c-cpns\forget-pwd\style.js                                            | JavaScript     |         63 |          0 |          1 |         64 |
+| q:\React项目合集(已做)\onresume\src\pages\login\index.jsx                                                             | JavaScript JSX |         17 |          1 |          2 |         20 |
+| q:\React项目合集(已做)\onresume\src\pages\login\style.js                                                              | JavaScript     |          6 |          0 |          1 |          7 |
+| q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\my-info\index.jsx                                                 | JavaScript JSX |         54 |          1 |          2 |         57 |
+| q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\my-info\style.js                                                  | JavaScript     |         28 |          3 |          2 |         33 |
+| q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\my-order\index.jsx                                                | JavaScript JSX |        218 |         11 |          6 |        235 |
+| q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\my-resume\index.jsx                                               | JavaScript JSX |        123 |          1 |          2 |        126 |
+| q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\my-resume\style.js                                                | JavaScript     |         64 |          0 |          3 |         67 |
+| q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\popularize\index.jsx                                              | JavaScript JSX |          7 |          0 |          2 |          9 |
+| q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\upload-template\index.jsx                                         | JavaScript JSX |          5 |          0 |          3 |          8 |
+| q:\React项目合集(已做)\onresume\src\pages\my\index.jsx                                                                | JavaScript JSX |         18 |          0 |          3 |         21 |
+| q:\React项目合集(已做)\onresume\src\pages\my\style.js                                                                 | JavaScript     |          6 |          0 |          2 |          8 |
+| q:\React项目合集(已做)\onresume\src\pages\register\index.jsx                                                          | JavaScript JSX |         11 |          0 |          2 |         13 |
+| q:\React项目合集(已做)\onresume\src\pages\register\style.js                                                           | JavaScript     |          3 |          0 |          2 |          5 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-bottomTab\index.jsx                                                  | JavaScript JSX |        132 |         16 |          7 |        155 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-bottomTab\style.js                                                   | JavaScript     |         26 |          0 |          2 |         28 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\drawer-tabs\index.jsx                                 | JavaScript JSX |        106 |          2 |          5 |        113 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-helpOpt\index.jsx                              | JavaScript JSX |         47 |          1 |          2 |         50 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-helpOpt\style.js                               | JavaScript     |        102 |          0 |         12 |        114 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-helper\index.jsx                               | JavaScript JSX |         21 |          1 |          4 |         26 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-helper\style.js                                | JavaScript     |         60 |          0 |          8 |         68 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-main\index.jsx                                 | JavaScript JSX |         51 |          5 |          3 |         59 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-main\style.js                                  | JavaScript     |         56 |          4 |          7 |         67 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\basicInfoTab\index.jsx         | JavaScript JSX |        144 |          7 |          4 |        155 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\basicInfoTab\style.js          | JavaScript     |         26 |          1 |          2 |         29 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\campusExperienceTab\index.jsx  | JavaScript JSX |         49 |          0 |          2 |         51 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\campusExperienceTab\style.js   | JavaScript     |          2 |          0 |          2 |          4 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\certificateHonorTab\index.jsx  | JavaScript JSX |         11 |          0 |          3 |         14 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\editor-inputs\index.jsx        | JavaScript JSX |         40 |          0 |          5 |         45 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\editor-inputs\style.js         | JavaScript     |          4 |          0 |          2 |          6 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\jobIntentTab\index.jsx         | JavaScript JSX |         37 |          1 |          5 |         43 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\jobIntentTab\style.js          | JavaScript     |         15 |          0 |          2 |         17 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\projectExperienceTab\index.jsx | JavaScript JSX |         49 |          0 |          2 |         51 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\projectExperienceTab\style.js  | JavaScript     |          2 |          0 |          1 |          3 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\selfEvaluationTab\index.jsx    | JavaScript JSX |         11 |          0 |          2 |         13 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\skillSpecialtiesTab\index.jsx  | JavaScript JSX |         12 |          0 |          4 |         16 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-Editor\index.jsx           | JavaScript JSX |         41 |          1 |          2 |         44 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-Editor\style.js            | JavaScript     |         20 |          0 |          2 |         22 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-date\index.css             | CSS            |          3 |          0 |          0 |          3 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-date\index.jsx             | JavaScript JSX |         13 |          0 |          2 |         15 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-input\index.jsx            | JavaScript JSX |         38 |          1 |          2 |         41 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\workExperienceTab\index.css    | CSS            |          7 |          0 |          1 |          8 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\workExperienceTab\index.jsx    | JavaScript JSX |         28 |          0 |          3 |         31 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\index.jsx                             | JavaScript JSX |         27 |          0 |          3 |         30 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\index.jsx                                                    | JavaScript JSX |         17 |          0 |          2 |         19 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-details\style.js                                                     | JavaScript     |          4 |          3 |          2 |          9 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-banner\index.jsx                                    | JavaScript JSX |         25 |          0 |          5 |         30 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-banner\style.js                                     | JavaScript     |         40 |          0 |          3 |         43 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-case\index.jsx                                      | JavaScript JSX |         45 |          0 |          3 |         48 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-case\style.js                                       | JavaScript     |         46 |          0 |          3 |         49 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-optimize\index.jsx                                  | JavaScript JSX |         55 |          0 |          2 |         57 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-optimize\style.js                                   | JavaScript     |         29 |          0 |          2 |         31 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-card\index.jsx                   | JavaScript JSX |         75 |          1 |          4 |         80 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-card\style.js                    | JavaScript     |         62 |          0 |         11 |         73 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-payCard\index.jsx                | JavaScript JSX |        120 |          4 |          8 |        132 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-payCard\style.js                 | JavaScript     |         56 |          5 |         10 |         71 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-steps\index.jsx                  | JavaScript JSX |        234 |          7 |         10 |        251 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-steps\style.js                   | JavaScript     |          9 |          0 |          2 |         11 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\index.jsx                                     | JavaScript JSX |         54 |          0 |          4 |         58 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-step\index.jsx                                      | JavaScript JSX |         61 |          0 |          4 |         65 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-step\style.js                                       | JavaScript     |         98 |          0 |          3 |        101 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-team\index.jsx                                      | JavaScript JSX |         37 |          0 |          3 |         40 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-team\style.js                                       | JavaScript     |         17 |          0 |          3 |         20 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\index.jsx                                                    | JavaScript JSX |         21 |          0 |          2 |         23 |
+| q:\React项目合集(已做)\onresume\src\pages\resume-service\style.js                                                     | JavaScript     |          3 |          0 |          2 |          5 |
+| q:\React项目合集(已做)\onresume\src\pages\template-list\index.jsx                                                     | JavaScript JSX |        122 |          0 |          4 |        126 |
+| q:\React项目合集(已做)\onresume\src\pages\template-list\style.js                                                      | JavaScript     |         12 |          1 |          2 |         15 |
+| q:\React项目合集(已做)\onresume\src\routers\index.js                                                                  | JavaScript     |         75 |          8 |          1 |         84 |
+| q:\React项目合集(已做)\onresume\src\services\index.js                                                                 | JavaScript     |          3 |          0 |          0 |          3 |
+| q:\React项目合集(已做)\onresume\src\services\modules\login.js                                                         | JavaScript     |         56 |          5 |          4 |         65 |
+| q:\React项目合集(已做)\onresume\src\services\modules\order.js                                                         | JavaScript     |         33 |          4 |          1 |         38 |
+| q:\React项目合集(已做)\onresume\src\services\modules\resume.js                                                        | JavaScript     |         23 |          2 |          1 |         26 |
+| q:\React项目合集(已做)\onresume\src\services\request\config.js                                                        | JavaScript     |          3 |          0 |          1 |          4 |
+| q:\React项目合集(已做)\onresume\src\services\request\index.js                                                         | JavaScript     |         57 |          3 |          3 |         63 |
+| q:\React项目合集(已做)\onresume\src\store\index.js                                                                    | JavaScript     |         16 |          0 |          1 |         17 |
+| q:\React项目合集(已做)\onresume\src\store\modules\code.js                                                             | JavaScript     |         22 |          0 |          0 |         22 |
+| q:\React项目合集(已做)\onresume\src\store\modules\editResume.js                                                       | JavaScript     |         21 |          1 |          1 |         23 |
+| q:\React项目合集(已做)\onresume\src\store\modules\login.js                                                            | JavaScript     |         14 |          6 |          0 |         20 |
+| q:\React项目合集(已做)\onresume\src\store\modules\order.js                                                            | JavaScript     |         32 |          1 |          1 |         34 |
+| q:\React项目合集(已做)\onresume\src\store\modules\register.js                                                         | JavaScript     |          0 |          0 |          1 |          1 |
+| q:\React项目合集(已做)\onresume\src\store\modules\resumeInfo.js                                                       | JavaScript     |        170 |          7 |          1 |        178 |
+| q:\React项目合集(已做)\onresume\src\store\modules\service.js                                                          | JavaScript     |         14 |          0 |          1 |         15 |
+| q:\React项目合集(已做)\onresume\src\utils\auth.js                                                                     | JavaScript     |         13 |          3 |          2 |         18 |
+| q:\React项目合集(已做)\onresume\src\utils\exportPDF.js                                                                | JavaScript     |         51 |         15 |          5 |         71 |
+| q:\React项目合集(已做)\onresume\src\utils\setResumeTime.js                                                            | JavaScript     |          0 |          8 |          1 |          9 |
+| Total                                                                                                           |                |     39,376 |        252 |        503 |     40,131 |
++-----------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

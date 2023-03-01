@@ -1,16 +1,10 @@
-import axios from 'axios'
-import PropTypes from 'prop-types'
-import React, { memo } from 'react'
-import { ResumeImgWrapper } from './style'
+import React, { memo } from "react";
+import { ResumeImgWrapper } from "./style";
 
 const ResumeImg = memo((props) => {
-    return (
-        <ResumeImgWrapper>
+  return <ResumeImgWrapper></ResumeImgWrapper>;
+});
 
-        </ResumeImgWrapper>
-    )
-})
+ResumeImg.propTypes = {};
 
-ResumeImg.propTypes = {}
-
-export default ResumeImg
+export default ResumeImg;

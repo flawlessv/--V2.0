@@ -1,12 +1,8 @@
 .app {
-    position: relative;
-    height: 2500px;
-    /* background-image: linear-gradient(25deg, #adafb9, #b0bec2, #b3cdcb, #b5dcd4) */
-    background-image: linear-gradient(324deg, #2d2787, #6b4983, #976e7d, #c09574);
-    
+  position: relative;
+  background-image: linear-gradient(324deg, #c09574, #976e7d, #6b4983, #2d2787);
 }
 
 .home {
-    padding-top: 50px;
+  padding-top: 50px;
 }
-

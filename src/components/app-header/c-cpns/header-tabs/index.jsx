@@ -11,7 +11,7 @@ export default function HeaderTabs() {
     const tabDatas = [
         {
             name: '首页',
-            path: '/home'
+            path: '/'
         },
         {
             name: '模板大全',
