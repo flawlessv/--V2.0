@@ -1,15 +1,12 @@
-import React, { memo, useEffect, useState } from "react";
-import { Card, Space, Table, Tag } from "antd";
-import { fetchOrderInfoAction } from "../../../../store/modules/order";
-import { useDispatch, useSelector } from "react-redux";
-import { Button, Form, Input, Modal, Select, message, Popconfirm } from "antd";
-import {
-  deleteOrder,
-  patchOrderInfo,
-} from "../../../../services/modules/order";
+import React, { memo, useEffect, useState } from 'react'
+import { Card, Space, Table, Tag } from 'antd'
+import { fetchOrderInfoAction } from '../../../../store/modules/order'
+import { useDispatch, useSelector } from 'react-redux'
+import { Button, Form, Input, Modal, Select, message, Popconfirm } from 'antd'
+import { deleteOrder, patchOrderInfo } from '../../../../services/modules/order'
 //修改订单对话框
 const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
-  const [form] = Form.useForm();
+  const [form] = Form.useForm()
   return (
     <Modal
       open={open}
@@ -21,12 +18,12 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         form
           .validateFields()
           .then((values) => {
-            form.resetFields();
-            onCreate(values);
+            form.resetFields()
+            onCreate(values)
           })
           .catch((info) => {
-            console.log("Validate Failed:", info);
-          });
+            console.log('Validate Failed:', info)
+          })
       }}
     >
       <Form
@@ -34,7 +31,7 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         layout="vertical"
         name="form_in_modal"
         initialValues={{
-          modifier: "public",
+          modifier: 'public'
         }}
       >
         <Form.Item
@@ -43,17 +40,17 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           rules={[
             {
               required: true,
-              message: "请输入要修改的服务类型!",
-            },
+              message: '请输入要修改的服务类型!'
+            }
           ]}
         >
           <Select
             // defaultValue="普通服务"
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             options={[
-              { value: 0, label: "普通服务" },
-              { value: 1, label: "特殊服务" },
-              { value: 2, label: "终极服务" },
+              { value: 0, label: '普通服务' },
+              { value: 1, label: '特殊服务' },
+              { value: 2, label: '终极服务' }
             ]}
           />
         </Form.Item>
@@ -63,17 +60,17 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
           rules={[
             {
               required: true,
-              message: "请输入要修改的简历服务师!",
-            },
+              message: '请输入要修改的简历服务师!'
+            }
           ]}
         >
           <Select
             // initialvalue={"马化腾"}
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             options={[
-              { value: 0, label: "马化腾" },
-              { value: 1, label: "奥特曼" },
-              { value: 2, label: "郭猛" },
+              { value: 0, label: '马化腾' },
+              { value: 1, label: '奥特曼' },
+              { value: 2, label: '郭猛' }
             ]}
           />
         </Form.Item>
@@ -82,99 +79,99 @@ const CollectionCreateForm = ({ open, onCreate, onCancel }) => {
         </Form.Item>
       </Form>
     </Modal>
-  );
-};
+  )
+}
 const MyOrder = memo(() => {
-  const [open, setOpen] = useState(false);
-  const [currentid, setCurrentId] = useState(0);
-  const dispatch = useDispatch();
+  const [open, setOpen] = useState(false)
+  const [currentid, setCurrentId] = useState(0)
+  const dispatch = useDispatch()
 
   // 获取订单数据
   useEffect(() => {
-    dispatch(fetchOrderInfoAction({pageSize:4,userId:7,pageNum:1}));
-  }, [dispatch]);
+    dispatch(fetchOrderInfoAction({ pageSize: 4, userId: 7, pageNum: 1 }))
+  }, [dispatch])
   const { orderInfo, orderTotal } = useSelector((state) => ({
     orderInfo: state.order.orderInfo,
-    orderTotal: state.order.orderTotal,
-  }));
+    orderTotal: state.order.orderTotal
+  }))
   const myData = orderInfo.map((item, index) => ({
     ...item,
     key: index + 1,
-    tag: item.state === 0 ? "进行中" : "已完成",
-    serveType: item.serveType === 0 ? "普通服务" : "特殊服务",
-  }));
+    tag: item.state === 0 ? '进行中' : '已完成',
+    serveType: item.serveType === 0 ? '普通服务' : '特殊服务'
+  }))
   //  处理订单分页
   const handlePagination = (values) => {
-    dispatch(fetchOrderInfoAction({pageSize:4,userId:7,pageNum:values}))
-    console.log(values);
-  };
+    dispatch(fetchOrderInfoAction({ pageSize: 4, userId: 7, pageNum: values }))
+    console.log(values)
+  }
   // 修改订单信息的函数
   const handleChangeOrder = (orderId) => {
-    setCurrentId(orderId);
-    setOpen(true);
-  };
+    setCurrentId(orderId)
+    setOpen(true)
+  }
   //删除订单
   const handleDeleteOrder = async (orderId) => {
-    const res = await deleteOrder(orderId);
+    const res = await deleteOrder(orderId)
     if (res.code === 200) {
-      message.success(res.msg);
-      dispatch(fetchOrderInfoAction(123));
+      message.success(res.msg)
+      dispatch(fetchOrderInfoAction(123))
     } else {
-      cancel();
+      cancel()
     }
-  };
+  }
   //提交表单函数
   const onCreate = async (values) => {
     // 设置新的订单数据
-    const newOrderInfo = orderInfo.filter((item) => item.orderId === currentid);
+    const newOrderInfo = orderInfo.filter((item) => item.orderId === currentid)
     // 发送网络请求
-    const res = await patchOrderInfo({ ...newOrderInfo[0], ...values });
+    const res = await patchOrderInfo({ ...newOrderInfo[0], ...values })
     if (res.code === 200) {
-      message.success(res.msg);
+      message.success(res.msg)
     } else {
-      message.error(res.msg);
+      message.error(res.msg)
     }
-    dispatch(fetchOrderInfoAction("修改"));
-    setOpen(false);
-  };
+    dispatch(fetchOrderInfoAction('修改'))
+    setOpen(false)
+  }
 
   const cancel = (e) => {
-    message.error("删除失败");
-  };
+    message.error('删除失败')
+  }
   //表格数据
 
   const columns = [
     {
-      title: "订单名称",
-      dataIndex: "serveType",
-      key: "serveType",
-      render: (text) => <span>{text}</span>,
+      title: '订单名称',
+      dataIndex: 'serveType',
+      key: 'serveType',
+      render: (text) => <span>{text}</span>
     },
     {
-      title: "价格",
-      dataIndex: "integral",
-      key: "integral",
+      title: '价格',
+      dataIndex: 'integral',
+      key: 'integral'
     },
     {
-      title: "订单备注",
-      dataIndex: "remake",
-      key: "remake",
+      title: '订单备注',
+      dataIndex: 'remake',
+      key: 'remake'
     },
     {
-      title: "订单状态",
-      key: "tag",
-      dataIndex: "tag",
+      title: '订单状态',
+      key: 'tag',
+      dataIndex: 'tag',
       render: (_, { tag }) => (
         <>
-          <Tag color={tag === "进行中" ? "green" : "volcano"} key={tag}>
+          <Tag color={tag === '进行中' ? 'green' : 'volcano'} key={tag}>
             {tag}
           </Tag>
         </>
-      ),
+      )
     },
     {
-      title: "操作",
-      key: "action",
+      title: '操作',
+      key: 'action',
       render: (_, record) => (
         <Space size="middle">
           <Button
@@ -196,9 +193,9 @@ const MyOrder = memo(() => {
             </Button>
           </Popconfirm>
         </Space>
-      ),
-    },
-  ];
+      )
+    }
+  ]
 
   return (
     <div>
@@ -207,7 +204,7 @@ const MyOrder = memo(() => {
         bordered={false}
         style={{
           width: 1050,
-          height: 500,
+          height: 500
         }}
       >
         <Table
@@ -216,7 +213,7 @@ const MyOrder = memo(() => {
           pagination={{
             total: orderTotal,
             defaultPageSize: 4,
-            onChange: handlePagination,
+            onChange: handlePagination
           }}
         />
       </Card>
@@ -224,11 +221,11 @@ const MyOrder = memo(() => {
         open={open}
         onCreate={onCreate}
         onCancel={() => {
-          setOpen(false);
+          setOpen(false)
         }}
       />
     </div>
-  );
-});
+  )
+})
 
-export default MyOrder;
+export default MyOrder

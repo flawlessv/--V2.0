@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ContentWrapper = styled.div`
   margin-top: 16px;
@@ -60,4 +60,4 @@ export const ContentWrapper = styled.div`
     margin-top: 7px;
     line-height: 1.7;
   }
-`;
+`

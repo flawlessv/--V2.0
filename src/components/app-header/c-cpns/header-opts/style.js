@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const OptsWrapper = styled.div`
   /* width: 75%; */
@@ -8,11 +8,8 @@ export const OptsWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-
-
-
-/* CSS */
-.button-73 {
+  /* CSS */
+  .button-73 {
     appearance: none;
     background-color: #ffffff;
     border-radius: 40em;
@@ -54,4 +51,4 @@ export const OptsWrapper = styled.div`
       padding: 0.75rem 2rem;
     }
   }
-`;
+`

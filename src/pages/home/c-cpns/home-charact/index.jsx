@@ -1,10 +1,10 @@
-import React, { memo } from "react";
-import { HomeCharactWrapper } from "./style";
+import React, { memo } from 'react'
+import { HomeCharactWrapper } from './style'
 
 const HomeCharact = memo((props) => {
   const {
-    cData: { title, subtitle, element },
-  } = props;
+    cData: { title, subtitle, element }
+  } = props
   return (
     <HomeCharactWrapper>
       <div className="HomeCharact-content">
@@ -13,8 +13,7 @@ const HomeCharact = memo((props) => {
         <p className="charact-subtitle">{subtitle}</p>
       </div>
     </HomeCharactWrapper>
-  );
-});
+  )
+})
 
-
-export default HomeCharact;
+export default HomeCharact

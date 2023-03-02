@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const MyTabsWrapper = styled.div`
   .mytabs {
@@ -11,17 +11,17 @@ export const MyTabsWrapper = styled.div`
       position: relative;
       line-height: 36px;
       font-weight: 400;
-      color:#1677ff;
+      color: #1677ff;
       &.active {
         background-color: blue;
       }
     }
-    button[tabindex="0"] {
+    button[tabindex='0'] {
       color: #fff;
       background-color: #1677ff;
     }
   }
-  div[aria-labelledby^="vertical-tab-"] {
+  div[aria-labelledby^='vertical-tab-'] {
     background-color: #fff;
     width: 100%;
     border-radius: 5px;
@@ -29,4 +29,4 @@ export const MyTabsWrapper = styled.div`
   .css-19kzrtu {
     padding: 0;
   }
-`;
+`

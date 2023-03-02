@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ResumeMainWrapper = styled.div`
   padding: 5px;
@@ -63,4 +63,4 @@ export const ResumeMainWrapper = styled.div`
     position: relative;
     margin: 0 30px 0;
   }
-`;
+`

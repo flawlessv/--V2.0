@@ -1,36 +1,36 @@
-import React, { memo } from "react";
-import { MyResumeWrapper } from "./style";
-import { Card as ACard} from "antd";
-import Card  from '@mui/material/Card';
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import EditIcon from "@mui/icons-material/Edit";
-import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import DeleteIcon from "@mui/icons-material/Delete";
-import ScreenShareIcon from "@mui/icons-material/ScreenShare";
-import Box from "@mui/material/Box";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import { useSelector } from "react-redux";
+import React, { memo } from 'react'
+import { MyResumeWrapper } from './style'
+import { Card as ACard } from 'antd'
+import Card from '@mui/material/Card'
+import Stack from '@mui/material/Stack'
+import Button from '@mui/material/Button'
+import EditIcon from '@mui/icons-material/Edit'
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
+import DeleteIcon from '@mui/icons-material/Delete'
+import ScreenShareIcon from '@mui/icons-material/ScreenShare'
+import Box from '@mui/material/Box'
+import CardActions from '@mui/material/CardActions'
+import CardContent from '@mui/material/CardContent'
+import Typography from '@mui/material/Typography'
+import { useSelector } from 'react-redux'
 const MyResume = memo(() => {
   const {
     baseInfo: { name },
     jobIntent: { intent, expectSalary, city },
-    createTime,
+    createTime
   } = useSelector((state) => ({
     baseInfo: state.resume.resumeData.baseInfo,
     jobIntent: state.resume.resumeData.jobIntent,
-    createTime: state.resume.resumeData.createTime,
-  }));
+    createTime: state.resume.resumeData.createTime
+  }))
   const bull = (
     <Box
       component="span"
-      sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
     >
       •
     </Box>
-  );
+  )
   return (
     <MyResumeWrapper>
       <ACard
@@ -38,7 +38,7 @@ const MyResume = memo(() => {
         bordered={false}
         style={{
           width: 1050,
-          height: 500,
+          height: 500
         }}
       >
         <div className="myresume">
@@ -56,7 +56,7 @@ const MyResume = memo(() => {
               <span>{expectSalary}</span>
               <span>{city}</span>
             </div>
-            <Card sx={{ minWidth: 100,mt:2 }}>
+            <Card sx={{ minWidth: 100, mt: 2 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
@@ -69,18 +69,23 @@ const MyResume = memo(() => {
                   简{bull}历{bull}规{bull}划{bull}师
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                一对一沟通百分百定制
+                  一对一沟通百分百定制
                 </Typography>
                 <Typography variant="body2">
-               带你分析目标岗位相关性,深入挖掘个人能力
+                  带你分析目标岗位相关性,深入挖掘个人能力
                   <br />
                   {'"你好,需要简历援助吗~"'}
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" sx={{
-                  padding:0
-                }}>了解更多</Button>
+                <Button
+                  size="small"
+                  sx={{
+                    padding: 0
+                  }}
+                >
+                  了解更多
+                </Button>
               </CardActions>
             </Card>
             <div className="resume-option">
@@ -119,7 +124,7 @@ const MyResume = memo(() => {
         </div>
       </ACard>
     </MyResumeWrapper>
-  );
-});
+  )
+})
 
-export default MyResume;
+export default MyResume

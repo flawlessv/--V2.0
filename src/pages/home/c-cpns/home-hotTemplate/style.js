@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HotTemplateWrapper = styled.div`
   background-color: #f5f5f5;
@@ -126,4 +126,4 @@ export const HotTemplateWrapper = styled.div`
   .rt-bun:hover i:nth-child(10) {
     transition-delay: calc(0.045s * 10);
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SstepWrapper = styled.div`
   padding: 120px 0;
@@ -97,4 +97,4 @@ export const SstepWrapper = styled.div`
     }
     ${(props) => props.theme.mixin.btnV1}
   }
-`;
+`

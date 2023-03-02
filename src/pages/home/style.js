@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 export const HomeWrapper = styled.div`
   .homeCharact {
     background-color: #fff;
@@ -17,4 +17,4 @@ export const HomeWrapper = styled.div`
       padding-bottom: 90px;
     }
   }
-`;
+`

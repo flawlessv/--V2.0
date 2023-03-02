@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const CardWrapper = styled.div`
   width: 200px;
@@ -42,7 +42,7 @@ export const CardWrapper = styled.div`
     -webkit-transition: ease all 0.6s;
   }
 
-  .checkbox-wrapper-31 input[type="checkbox"] {
+  .checkbox-wrapper-31 input[type='checkbox'] {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -54,19 +54,19 @@ export const CardWrapper = styled.div`
     -webkit-appearance: none;
   }
 
-  .checkbox-wrapper-31 input[type="checkbox"]:hover {
+  .checkbox-wrapper-31 input[type='checkbox']:hover {
     cursor: pointer;
   }
 
-  .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .background {
+  .checkbox-wrapper-31 input[type='checkbox']:checked + svg .background {
     fill: #6cbe45;
   }
 
-  .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .stroke {
+  .checkbox-wrapper-31 input[type='checkbox']:checked + svg .stroke {
     stroke-dashoffset: 0;
   }
 
-  .checkbox-wrapper-31 input[type="checkbox"]:checked + svg .check {
+  .checkbox-wrapper-31 input[type='checkbox']:checked + svg .check {
     stroke-dashoffset: 0;
   }
-`;
+`

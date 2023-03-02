@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const BannerWrapper = styled.div`
   color: #fff;
@@ -43,4 +43,4 @@ export const BannerWrapper = styled.div`
       rgba(44, 187, 99, 0.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Paywrapper = styled.div`
   .card {
@@ -67,4 +67,4 @@ export const Paywrapper = styled.div`
     box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px,
       rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
   }
-`;
+`

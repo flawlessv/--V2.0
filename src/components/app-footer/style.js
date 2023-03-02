@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const FooterWrapper = styled.div`
   display: ${(props) =>
-    props.path === "/" || props.path === "/guide" ? "block" : "none"};
+    props.path === '/' || props.path === '/guide' ? 'block' : 'none'};
   position: absolute;
   bottom: 0;
   left: 0;
@@ -52,4 +52,4 @@ export const FooterWrapper = styled.div`
     margin-top: 50px;
   }
   /* } */
-`;
+`

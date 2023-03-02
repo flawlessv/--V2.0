@@ -1,107 +1,107 @@
-import PropTypes from "prop-types";
-import React, { memo, useState } from "react";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import TabInput from "../tab-input";
-import AddIcon from "@mui/icons-material/Add";
-import Input from "@mui/material/Input";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import { useDispatch, useSelector } from "react-redux";
-import Divider from "@mui/material/Divider";
+import PropTypes from 'prop-types'
+import React, { memo, useState } from 'react'
+import Button from '@mui/material/Button'
+import IconButton from '@mui/material/IconButton'
+import TabInput from '../tab-input'
+import AddIcon from '@mui/icons-material/Add'
+import Input from '@mui/material/Input'
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
+import { useDispatch, useSelector } from 'react-redux'
+import Divider from '@mui/material/Divider'
 // import { setBaseInfo } from "@/store/modules/resumeInfo";
-import { useRef } from "react";
-import { BasicInfoTabWrapper } from "./style";
+import { useRef } from 'react'
+import { BasicInfoTabWrapper } from './style'
 // 个人基本信息组件
 const BasicInfoTab = memo((props) => {
   const data = [
     {
-      name: "name",
-      label: "姓名",
-      isExtra: false,
+      name: 'name',
+      label: '姓名',
+      isExtra: false
     },
     {
-      name: "sex",
-      label: "性別",
-      isExtra: false,
+      name: 'sex',
+      label: '性別',
+      isExtra: false
     },
     {
-      name: "birthday",
-      label: "年龄",
-      isExtra: false,
+      name: 'birthday',
+      label: '年龄',
+      isExtra: false
     },
     {
-      name: "telephone",
-      label: "手机号",
-      isExtra: false,
+      name: 'telephone',
+      label: '手机号',
+      isExtra: false
     },
     {
-      name: "email",
-      label: "邮箱",
-      isExtra: false,
+      name: 'email',
+      label: '邮箱',
+      isExtra: false
     },
     {
-      name: "workYear",
-      label: "工作年限",
-      isExtra: false,
+      name: 'workYear',
+      label: '工作年限',
+      isExtra: false
     },
     {
-      name: "imgUrl",
-      label: "照片",
-      isExtra: false,
+      name: 'imgUrl',
+      label: '照片',
+      isExtra: false
     },
     {
-      name: "politicalLandscape",
-      label: "政治面貌",
-      isExtra: false,
+      name: 'politicalLandscape',
+      label: '政治面貌',
+      isExtra: false
     },
     {
-      name: "origin",
-      label: "目前所在地",
-      isExtra: false,
+      name: 'origin',
+      label: '目前所在地',
+      isExtra: false
     },
     {
-      name: "ethnic",
-      label: "民族",
-      isExtra: false,
+      name: 'ethnic',
+      label: '民族',
+      isExtra: false
     },
     {
-      name: "height",
-      label: "身高",
-      isExtra: false,
+      name: 'height',
+      label: '身高',
+      isExtra: false
     },
     {
-      name: "weight",
-      label: "体重",
-      isExtra: false,
-    },
-  ];
-  const [BasicInfoTabDataSource, setBasicInfoTabDataSource] = useState(data);
-  const [newTabDataSource, setNewTabDataSource] = useState([]);
-  const dispatch = useDispatch();
-  const labelRef = useRef();
-  const valueRef = useRef();
+      name: 'weight',
+      label: '体重',
+      isExtra: false
+    }
+  ]
+  const [BasicInfoTabDataSource, setBasicInfoTabDataSource] = useState(data)
+  const [newTabDataSource, setNewTabDataSource] = useState([])
+  const dispatch = useDispatch()
+  const labelRef = useRef()
+  const valueRef = useRef()
   const { baseInfo } = useSelector((state) => ({
-    baseInfo: state.resume.resumeData.baseInfo,
-  }));
+    baseInfo: state.resume.resumeData.baseInfo
+  }))
   //新增自定义个人信息
   const addExtraBasicInfo = () => {
-    const label = labelRef.current.value;
-    const value = valueRef.current.value;
+    const label = labelRef.current.value
+    const value = valueRef.current.value
     const newData = {
       name: label,
       label,
       defaultValue: value,
-      isExtra: true,
-    };
+      isExtra: true
+    }
     // setBasicInfoTabDataSource([...BasicInfoTabDataSource,newData ])
-    setNewTabDataSource([...newTabDataSource, newData]);
-    dispatch(setBasicInfo({ ...baseInfo, [label]: value }));
-  };
+    setNewTabDataSource([...newTabDataSource, newData])
+    dispatch(setBasicInfo({ ...baseInfo, [label]: value }))
+  }
   // 删除新增信息
   const deleteExtraBasicInfo = (name) => {
-    const newData = newTabDataSource?.filter((item) => item.name !== name);
-    setNewTabDataSource(newData);
-  };
+    const newData = newTabDataSource?.filter((item) => item.name !== name)
+    setNewTabDataSource(newData)
+  }
   return (
     <BasicInfoTabWrapper>
       {/* 原有的基本信息 */}
@@ -146,9 +146,9 @@ const BasicInfoTab = memo((props) => {
         </Button>
       </div>
     </BasicInfoTabWrapper>
-  );
-});
+  )
+})
 
-BasicInfoTab.propTypes = {};
+BasicInfoTab.propTypes = {}
 
-export default BasicInfoTab;
+export default BasicInfoTab

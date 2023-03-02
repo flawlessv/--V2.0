@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SteamWrapper = styled.div`
   background-color: #fff;
@@ -15,5 +15,4 @@ export const SteamWrapper = styled.div`
     color: #825633;
     font-size: 18px;
   }
-
-`;
+`

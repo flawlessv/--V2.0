@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const MyInfoWrapper = styled.div`
   .my-info {
@@ -24,9 +24,9 @@ export const MyInfoWrapper = styled.div`
         font-size: 16px;
         color: #666;
         .vipbtn {
-            margin-left: 10px;
+          margin-left: 10px;
         }
       }
     }
   }
-`;
+`

@@ -4,11 +4,10 @@ import TabEditor from '../tab-Editor'
 
 const SkillSpecialties = memo((props) => {
   return (
-    <div >
+    <div>
       <TabEditor fn={setSkillSpecialties}></TabEditor>
     </div>
   )
-
 })
 
 SkillSpecialties.propTypes = {}

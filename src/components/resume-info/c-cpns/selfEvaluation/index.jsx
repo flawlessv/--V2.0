@@ -1,12 +1,12 @@
-import React, { memo } from "react";
-import { useSelector } from "react-redux";
-import ResumeTitle from "../resume-title";
-import { ProjExpeWrapper } from "./style";
+import React, { memo } from 'react'
+import { useSelector } from 'react-redux'
+import ResumeTitle from '../resume-title'
+import { ProjExpeWrapper } from './style'
 
 const SelfEvaluation = memo((props) => {
   const { selfEvaluation } = useSelector((state) => ({
-    selfEvaluation: state.resume.resumeData.selfEvaluation,
-  }));
+    selfEvaluation: state.resume.resumeData.selfEvaluation
+  }))
   return (
     <ProjExpeWrapper>
       <ResumeTitle title="自我评价"></ResumeTitle>
@@ -15,7 +15,7 @@ const SelfEvaluation = memo((props) => {
         dangerouslySetInnerHTML={{ __html: selfEvaluation }}
       ></div>
     </ProjExpeWrapper>
-  );
-});
+  )
+})
 
-export default SelfEvaluation;
+export default SelfEvaluation

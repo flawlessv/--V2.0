@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ProjExpeWrapper = styled.div`
   margin-top: 30px;
@@ -24,4 +24,4 @@ export const ProjExpeWrapper = styled.div`
     margin-top: 7px;
     line-height: 1.7;
   }
-`;
+`

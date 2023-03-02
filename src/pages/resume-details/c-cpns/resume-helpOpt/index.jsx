@@ -1,6 +1,6 @@
-import React, { memo } from "react";
-import { HelperWrapper } from "./style";
-import { Card } from "antd";
+import React, { memo } from 'react'
+import { HelperWrapper } from './style'
+import { Card } from 'antd'
 const ResumeHelpOpt = memo(() => {
   return (
     <HelperWrapper>
@@ -10,10 +10,10 @@ const ResumeHelpOpt = memo(() => {
         extra={<a href="/">More</a>}
         style={{
           width: 300,
-          height: 200,
+          height: 200
         }}
       >
-        <div style={{ display: "flex", marginTop: 20 }}>
+        <div style={{ display: 'flex', marginTop: 20 }}>
           <button className="diagnose"> 诊断简历</button>
           <button className="optimize">
             <svg
@@ -31,19 +31,19 @@ const ResumeHelpOpt = memo(() => {
             <span>优化简历</span>
           </button>
         </div>
-        <div  className="card">
-          <div  className="header">常见问题</div>
-          <div  className="body">
-            <div  className="skill">1:简历怎么保存？</div>
-            <div  className="skill">2:怎么下载 / 导出简历？</div>
-            <div  className="skill">3:怎么隐藏不需要的模块？</div>
-            <div  className="skill">4:隐藏模块怎么显示出来？</div>
-            <div  className="skill">5:模块顺序怎么调整？</div>
+        <div className="card">
+          <div className="header">常见问题</div>
+          <div className="body">
+            <div className="skill">1:简历怎么保存？</div>
+            <div className="skill">2:怎么下载 / 导出简历？</div>
+            <div className="skill">3:怎么隐藏不需要的模块？</div>
+            <div className="skill">4:隐藏模块怎么显示出来？</div>
+            <div className="skill">5:模块顺序怎么调整？</div>
           </div>
         </div>
       </Card>
     </HelperWrapper>
-  );
-});
+  )
+})
 
-export default ResumeHelpOpt;
+export default ResumeHelpOpt

@@ -1,13 +1,13 @@
-import React, { memo } from "react";
-import { ScaseWrapper } from "./style";
+import React, { memo } from 'react'
+import { ScaseWrapper } from './style'
 
-import img1 from "../../../../assets/img/demo1-1.png";
-import img2 from "../../../../assets/img/demo1-2.png";
-import img3 from "../../../../assets/img/demo2-1.png";
-import img4 from "../../../../assets/img/demo2-2.png";
-import useOrder from "../../../../hooks/useOrder";
+import img1 from '../../../../assets/img/demo1-1.png'
+import img2 from '../../../../assets/img/demo1-2.png'
+import img3 from '../../../../assets/img/demo2-1.png'
+import img4 from '../../../../assets/img/demo2-2.png'
+import useOrder from '../../../../hooks/useOrder'
 const Scase = memo(() => {
-  const order = useOrder();
+  const order = useOrder()
   return (
     <ScaseWrapper>
       <div className="content">
@@ -41,7 +41,7 @@ const Scase = memo(() => {
         </button>
       </div>
     </ScaseWrapper>
-  );
-});
+  )
+})
 
-export default Scase;
+export default Scase

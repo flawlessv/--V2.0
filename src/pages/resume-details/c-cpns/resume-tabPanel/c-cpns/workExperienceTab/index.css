@@ -1,8 +1,7 @@
-.timePicker{
-    position: relative;
-    z-index: 9999;
+.timePicker {
+  position: relative;
+  z-index: 9999;
 }
-.ant-picker-dropdown{
-    z-index: 9999;
-
+.ant-picker-dropdown {
+  z-index: 9999;
 }

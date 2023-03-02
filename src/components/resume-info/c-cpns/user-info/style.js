@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const BaseInfoWrapper = styled.div`
   font: 12px/1.5 Helvetica Neue, Arial, PingFang SC, Microsoft YaHei, SimSun,
@@ -125,4 +125,4 @@ export const BaseInfoWrapper = styled.div`
     background-position: 50%;
     right: 50px;
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SBannerWrapper = styled.div`
   padding: 120px 0;
@@ -11,7 +11,7 @@ export const SBannerWrapper = styled.div`
     ${(props) => props.theme.mixin.content}
 
     .s-bannerbg {
-      background: url(${require("@/assets/img/cartoon.png")}) no-repeat bottom;
+      background: url(${require('@/assets/img/cartoon.png')}) no-repeat bottom;
       background-size: auto 60%;
       position: absolute;
       left: 0;
@@ -39,4 +39,4 @@ export const SBannerWrapper = styled.div`
     }
     ${(props) => props.theme.mixin.btnV1}
   }
-`;
+`

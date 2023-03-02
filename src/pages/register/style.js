@@ -1,5 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const RegisterWrapper = styled.div`
-
-`
+export const RegisterWrapper = styled.div``

@@ -1,12 +1,12 @@
 const theme = {
   color: {
-    primary: "#144fff",
-    secendary: "#5cb3cc",
+    primary: '#144fff',
+    secendary: '#5cb3cc'
   },
   text: {},
   mixin: {
     backImg: `linear-gradient(25deg, #144fff, #286ffb, #268df6, #00aaf1)`,
-    content: "width:1240px;margin:50px auto;",
+    content: 'width:1240px;margin:50px auto;',
     dropStyle: ` background-color: #fff;
     color: #ccc;
     border-bottom:1px solid #ccc ;
@@ -111,7 +111,7 @@ box-shadow: 0 0 10px rgb(0 0 0 / 60%);
 
     .button-82-pushable:focus:not(:focus-visible) {
       outline: none;
-    }`,
-  },
-};
-export default theme;
+    }`
+  }
+}
+export default theme

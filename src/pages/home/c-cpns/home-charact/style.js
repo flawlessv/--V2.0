@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HomeCharactWrapper = styled.div`
   height: 200px;
@@ -33,4 +33,4 @@ export const HomeCharactWrapper = styled.div`
       min-height: 44px;
     }
   }
-`;
+`

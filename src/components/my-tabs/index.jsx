@@ -1,17 +1,17 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
-import { useNavigate } from "react-router-dom";
-import { MyTabsWrapper } from "./style";
-import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import ArticleIcon from "@mui/icons-material/Article";
-import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
-import BackupIcon from "@mui/icons-material/Backup";
-import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import * as React from 'react'
+import PropTypes from 'prop-types'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
+import Box from '@mui/material/Box'
+import { useNavigate } from 'react-router-dom'
+import { MyTabsWrapper } from './style'
+import AccountBoxIcon from '@mui/icons-material/AccountBox'
+import ArticleIcon from '@mui/icons-material/Article'
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits'
+import BackupIcon from '@mui/icons-material/Backup'
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn'
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, ...other } = props
 
   return (
     <div
@@ -28,58 +28,58 @@ function TabPanel(props) {
         </Box>
       )}
     </div>
-  );
+  )
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
+  value: PropTypes.number.isRequired
+}
 
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
-    "aria-controls": `vertical-tabpanel-${index}`,
-  };
+    'aria-controls': `vertical-tabpanel-${index}`
+  }
 }
 
 export default function MyTabs(props) {
   const myData = [
     {
-      label: "账户信息",
-      path: "/my/myinfo",
-      icon: <AccountBoxIcon sx={{ mr: 2 }} />,
+      label: '账户信息',
+      path: '/my/myinfo',
+      icon: <AccountBoxIcon sx={{ mr: 2 }} />
     },
     {
-      label: "我的简历",
-      path: "/my/myresume",
-      icon: <ArticleIcon sx={{ mr: 2 }} />,
+      label: '我的简历',
+      path: '/my/myresume',
+      icon: <ArticleIcon sx={{ mr: 2 }} />
     },
     {
-      label: "我的订单",
-      path: "/my/myorder",
-      icon: <ProductionQuantityLimitsIcon sx={{ mr: 2 }} />,
+      label: '我的订单',
+      path: '/my/myorder',
+      icon: <ProductionQuantityLimitsIcon sx={{ mr: 2 }} />
     },
     {
-      label: "上传模板",
-      path: "/my/upload",
-      icon: <BackupIcon sx={{ mr: 2 }} />,
+      label: '上传模板',
+      path: '/my/upload',
+      icon: <BackupIcon sx={{ mr: 2 }} />
     },
     {
-      label: "推广赚钱",
-      path: "/my/popularize",
-      icon: <MonetizationOnIcon sx={{ mr: 2 }} />,
-    },
-  ];
-  const [value, setValue] = React.useState(0);
-  const navigate = useNavigate();
+      label: '推广赚钱',
+      path: '/my/popularize',
+      icon: <MonetizationOnIcon sx={{ mr: 2 }} />
+    }
+  ]
+  const [value, setValue] = React.useState(0)
+  const navigate = useNavigate()
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
   const handleTabClick = (path) => {
-    navigate(path);
-  };
+    navigate(path)
+  }
 
   return (
     <MyTabsWrapper>
@@ -87,8 +87,8 @@ export default function MyTabs(props) {
         sx={{
           flexGrow: 1,
           // bgcolor: "background.paper",
-          display: "flex",
-          height: 500,
+          display: 'flex',
+          height: 500
         }}
       >
         <Tabs
@@ -100,16 +100,16 @@ export default function MyTabs(props) {
           className="mytabs"
           sx={{
             borderRight: 1,
-            borderColor: "divider",
-            bgcolor: "#fff",
+            borderColor: 'divider',
+            bgcolor: '#fff',
             width: 200,
-            borderRadius: 1,
+            borderRadius: 1
           }}
         >
           {myData.map((item, index) => (
             <Tab
               label={
-                <div style={{ display: "flex", alignItems: "center" }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
                   {item.icon}
                   {item.label}
                 </div>
@@ -127,5 +127,5 @@ export default function MyTabs(props) {
         ))}
       </Box>
     </MyTabsWrapper>
-  );
+  )
 }

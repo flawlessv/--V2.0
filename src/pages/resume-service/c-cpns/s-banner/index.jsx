@@ -1,10 +1,10 @@
-import React, { memo } from "react";
-import useOrder from "../../../../hooks/useOrder";
+import React, { memo } from 'react'
+import useOrder from '../../../../hooks/useOrder'
 
-import { SBannerWrapper } from "./style";
+import { SBannerWrapper } from './style'
 
 const Sbanner = memo(() => {
-  const order = useOrder();
+  const order = useOrder()
 
   return (
     <SBannerWrapper>
@@ -23,7 +23,7 @@ const Sbanner = memo(() => {
         </button>
       </div>
     </SBannerWrapper>
-  );
-});
+  )
+})
 
-export default Sbanner;
+export default Sbanner

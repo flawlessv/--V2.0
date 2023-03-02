@@ -1,27 +1,27 @@
-import React, { memo } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { FooterWrapper } from "./style";
+import React, { memo } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { FooterWrapper } from './style'
 
 const AppFooter = memo((props) => {
-  const location = useLocation();
+  const location = useLocation()
   const footerData = [
-    "首页",
-    "简历模板",
-    "简历咨询师",
-    "关于我们",
-    "常见问题",
-    "联系我们",
-    "服务协议",
-    "隐私声明",
-  ];
+    '首页',
+    '简历模板',
+    '简历咨询师',
+    '关于我们',
+    '常见问题',
+    '联系我们',
+    '服务协议',
+    '隐私声明'
+  ]
   const friendLinks = [
-    "中南招聘网",
-    "平顶山人才网",
-    "boss直聘",
-    "PPT模板",
-    "简历设计网",
-    "面试网",
-  ];
+    '中南招聘网',
+    '平顶山人才网',
+    'boss直聘',
+    'PPT模板',
+    '简历设计网',
+    '面试网'
+  ]
   return (
     <FooterWrapper path={location.pathname}>
       {/* <div className="footer-content"> */}
@@ -60,7 +60,7 @@ const AppFooter = memo((props) => {
       </div>
       {/* </div> */}
     </FooterWrapper>
-  );
-});
+  )
+})
 
-export default AppFooter;
+export default AppFooter

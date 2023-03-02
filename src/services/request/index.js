@@ -1,62 +1,62 @@
-import axios from "axios";
-import { BASE_URL, TIME_OUT, AUTHORIZATION } from "./config";
-import { getToken, isLogined } from "@/utils/auth";
+import axios from 'axios'
+import { BASE_URL, TIME_OUT, AUTHORIZATION } from './config'
+import { getAccessToken, getRefreshToken, isLogined } from '@/utils/auth'
 class HYRequest {
   constructor(baseURL, timeout) {
     this.instance = axios.create({
       baseURL,
-      timeout,
-    });
+      timeout
+    })
 
     this.instance.interceptors.request.use(
       (config) => {
         if (isLogined()) {
-          config.headers.Authorization = getToken();
+          config.headers.Authorization = getAccessToken()
         }
-        return config;
+        return config
       },
       (err) => err
-    );
+    )
 
     this.instance.interceptors.response.use(
       (res) => {
-        return res.data;
+        return res.data
       },
       (err) => err
-    );
+    )
   }
   request(config) {
-    return this.instance.request(config);
+    return this.instance.request(config)
   }
   get(config) {
     return this.request({
       ...config,
-      method: "get",
+      method: 'get',
       headers: {
-        Authorization: AUTHORIZATION,
-      },
-    });
+        Authorization: AUTHORIZATION
+      }
+    })
   }
   post(config) {
     // console.log(config, 'config');
     return this.request({
       ...config,
-      method: "post",
-    });
+      method: 'post'
+    })
   }
   put(config) {
     // console.log(config, 'config');
     return this.request({
       ...config,
-      method: "put",
-    });
+      method: 'put'
+    })
   }
   delete(config) {
     // console.log(config, 'config');
     return this.request({
       ...config,
-      method: "delete",
-    });
+      method: 'delete'
+    })
   }
 }
-export default new HYRequest(BASE_URL, TIME_OUT);
+export default new HYRequest(BASE_URL, TIME_OUT)

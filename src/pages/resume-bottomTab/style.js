@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const DingZhiWrapper = styled.div`
   .btn-grad {
@@ -24,4 +24,4 @@ export const DingZhiWrapper = styled.div`
     color: #fff;
     text-decoration: none;
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ServiceWrapper = styled.div`
   ${(props) => props.theme.mixin.content}
@@ -10,4 +10,4 @@ export const ServiceWrapper = styled.div`
     height: 600px;
     
   } */
-`;
+`

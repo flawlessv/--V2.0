@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderWrapper = styled.header`
   position: fixed;
@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    ${(props) => (props.path === "/" ? "" : props.theme.mixin.dropStyle)};
+    ${(props) => (props.path === '/' ? '' : props.theme.mixin.dropStyle)};
     height: 66px;
 
     &.dropStyle {
@@ -28,4 +28,4 @@ export const HeaderWrapper = styled.header`
       }
     }
   }
-`;
+`

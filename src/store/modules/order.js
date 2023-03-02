@@ -1,33 +1,33 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getOrderInfo } from "../../services/modules/order";
+import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk } from '@reduxjs/toolkit'
+import { getOrderInfo } from '../../services/modules/order'
 export const fetchOrderInfoAction = createAsyncThunk(
-  "OrderInfoAction",
+  'OrderInfoAction',
   async ({ pageSize, pageNum, userId }, { dispatch }) => {
-    const res = await getOrderInfo(pageSize, pageNum, userId);
-    dispatch(setOrderInfo(res.data.rows));
-    dispatch(setOrderTotal(res.data.total));
+    const res = await getOrderInfo(pageSize, pageNum, userId)
+    dispatch(setOrderInfo(res.data.rows))
+    dispatch(setOrderTotal(res.data.total))
   }
-);
+)
 const orderSlice = createSlice({
-  name: "orderSlice",
+  name: 'orderSlice',
   initialState: {
     orderOpen: false,
     orderTotal: 0,
-    orderInfo: [],
+    orderInfo: []
   },
   reducers: {
     setOrderOpen(state, { payload }) {
       // console.log(payload);
-      state.orderOpen = payload;
+      state.orderOpen = payload
     },
     setOrderInfo(state, { payload }) {
-      state.orderInfo = payload;
+      state.orderInfo = payload
     },
     setOrderTotal(state, { payload }) {
-      state.orderTotal = payload;
-    },
-  },
-});
-export const { setOrderOpen, setOrderInfo, setOrderTotal } = orderSlice.actions;
-export default orderSlice.reducer;
+      state.orderTotal = payload
+    }
+  }
+})
+export const { setOrderOpen, setOrderInfo, setOrderTotal } = orderSlice.actions
+export default orderSlice.reducer

@@ -1,8 +1,8 @@
-import React, { memo } from "react";
-import { Outlet } from "react-router-dom";
-import { MyWrapper } from "./style";
+import React, { memo } from 'react'
+import { Outlet } from 'react-router-dom'
+import { MyWrapper } from './style'
 
-import MyTabs from "../../components/my-tabs";
+import MyTabs from '../../components/my-tabs'
 const My = memo(() => {
   return (
     <MyWrapper>
@@ -14,7 +14,7 @@ const My = memo(() => {
         </MyTabs>
       </div>
     </MyWrapper>
-  );
-});
+  )
+})
 
-export default My;
+export default My

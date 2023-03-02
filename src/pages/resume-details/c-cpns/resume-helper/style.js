@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HelperWrapper = styled.div`
   margin-top: 100px;
@@ -64,4 +64,4 @@ export const HelperWrapper = styled.div`
     color: rgb(218, 244, 237);
     text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
   }
-`;
+`

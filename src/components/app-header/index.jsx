@@ -7,7 +7,7 @@ import HeaderTabs from './c-cpns/header-tabs'
 import { HeaderWrapper } from './style'
 import { useLocation } from 'react-router-dom'
 const AppHeader = memo(() => {
-  const location=useLocation()
+  const location = useLocation()
   const [showDropStyle, setShowDropStyle] = useState(false)
   // 滚轮向下划得时候改变header的样式
   useEffect(() => {
@@ -20,8 +20,10 @@ const AppHeader = memo(() => {
     }
   }, [window.scrollY])
   return (
-    <HeaderWrapper className='dropStyle' path={location.pathname}>
-      <div className={classNames('header-content', { dropStyle: showDropStyle })}>
+    <HeaderWrapper className="dropStyle" path={location.pathname}>
+      <div
+        className={classNames('header-content', { dropStyle: showDropStyle })}
+      >
         <HeaderLogo />
         <HeaderTabs />
         <HeaderOpts />

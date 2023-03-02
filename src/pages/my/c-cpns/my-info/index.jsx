@@ -1,15 +1,15 @@
-import React, { memo } from "react";
-import { MyInfoWrapper } from "./style";
-import { UserOutlined } from "@ant-design/icons";
-import { Card, Button, Descriptions } from "antd";
-import { Avatar } from "antd";
-import { useSelector } from "react-redux";
+import React, { memo } from 'react'
+import { MyInfoWrapper } from './style'
+import { UserOutlined } from '@ant-design/icons'
+import { Card, Button, Descriptions } from 'antd'
+import { Avatar } from 'antd'
+import { useSelector } from 'react-redux'
 const MyInfo = memo(() => {
   const {
-    userInfo: { avatar, tenantId, roleId, userId, userName },
+    userInfo: { avatar, tenantId, roleId, userId, userName }
   } = useSelector((state) => ({
-    userInfo: state.code.userInfo,
-  }));
+    userInfo: state.code.userInfo
+  }))
   return (
     <MyInfoWrapper>
       <Card
@@ -17,7 +17,7 @@ const MyInfo = memo(() => {
         bordered={false}
         style={{
           width: 1050,
-          height: 200,
+          height: 200
         }}
       >
         <div className="my-info">
@@ -26,7 +26,7 @@ const MyInfo = memo(() => {
             <div className="username">用户名:{userName}</div>
             <div className="userID">用户ID:{userId}</div>
             <div className="userType">
-              用户角色:{roleId === 1 ? "超级用户" : "普通用户"}
+              用户角色:{roleId === 1 ? '超级用户' : '普通用户'}
               <Button type="primary" className="vipbtn">
                 成为会员
               </Button>
@@ -38,7 +38,7 @@ const MyInfo = memo(() => {
       <Descriptions
         title="User Info"
         style={{
-          padding: "20px",
+          padding: '20px'
         }}
       >
         <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
@@ -50,7 +50,7 @@ const MyInfo = memo(() => {
         </Descriptions.Item>
       </Descriptions>
     </MyInfoWrapper>
-  );
-});
+  )
+})
 
-export default MyInfo;
+export default MyInfo

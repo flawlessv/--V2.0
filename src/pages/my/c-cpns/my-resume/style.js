@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const MyResumeWrapper = styled.div`
   .myresume {
@@ -15,7 +15,7 @@ export const MyResumeWrapper = styled.div`
       background-size: 100% auto;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-      background-image: url(${require("@/assets/img/myresume.png")});
+      background-image: url(${require('@/assets/img/myresume.png')});
     }
     .resume-content {
       margin-left: 220px;
@@ -63,4 +63,4 @@ export const MyResumeWrapper = styled.div`
       }
     }
   }
-`;
+`

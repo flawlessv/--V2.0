@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HotResumeWrapper = styled.div`
   width: 25%;
@@ -60,4 +60,4 @@ export const HotResumeWrapper = styled.div`
       }
     }
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 export const HelperWrapper = styled.div`
   margin-top: 80px;
   height: 300px;
@@ -21,7 +21,7 @@ export const HelperWrapper = styled.div`
   }
 
   .diagnose::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -110,4 +110,4 @@ export const HelperWrapper = styled.div`
       box-shadow: 0px 0px 105px 45px rgba(45, 255, 195, 0.9);
     }
   }
-`;
+`

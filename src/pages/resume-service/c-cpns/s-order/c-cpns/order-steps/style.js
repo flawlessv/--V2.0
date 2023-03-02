@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StepsWrapper = styled.div`
   .step-content {
@@ -7,4 +7,4 @@ export const StepsWrapper = styled.div`
     margin-top: 20px;
     height: 440px;
   }
-`;
+`

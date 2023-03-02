@@ -1,63 +1,63 @@
-import hyRequest from "..";
-import { AUTHORIZATION } from "../request/config";
+import hyRequest from '..'
+import { AUTHORIZATION } from '../request/config'
 // 获取图片验证码
 export const getCodeRequest = () => {
   return hyRequest.get({
-    url: "/mate-uaa/auth/code",
-  });
-};
+    url: '/mate-uaa/auth/code'
+  })
+}
 
 // 通过用户名登录
 export const loginByUsername = ({ username, password, code, key }) => {
   return hyRequest.post({
-    url: "/mate-uaa/oauth/token",
+    url: '/mate-uaa/oauth/token',
     data: {
-      grant_type: "captcha",
-      scope: "all",
+      grant_type: 'captcha',
+      scope: 'all',
       username,
-      password,
+      password
     },
     headers: {
       code,
       key,
-      Authorization: AUTHORIZATION,
-    },
-  });
-};
+      Authorization: AUTHORIZATION
+    }
+  })
+}
 //手机验证码下发
 export const getMobileCode = (mobile) => {
   return hyRequest.get({
-    url: "/mate-message-producer/send/sms",
+    url: '/mate-message-producer/send/sms',
     params: {
-      mobile,
-    },
-  });
-};
+      mobile
+    }
+  })
+}
 //通过手机号登录
 export const loginByMobile = (userData) => {
   return hyRequest.post({
-    url: "/mate-uaa/oauth/token",
+    url: '/mate-uaa/oauth/token',
     data: {
-      grant_type: "sms",
-      scope: "all",
-      ...userData,
+      grant_type: 'sms',
+      scope: 'all',
+      ...userData
     },
     headers: {
-      Authorization: AUTHORIZATION,
-    },
-  });
-};
+      Authorization: AUTHORIZATION
+    }
+  })
+}
 
 // 用户注册
 export const registerByMobile = (userData) => {
   return hyRequest.post({
-    url: "/mate-system/user/register",
+    url: '/mate-system/user/register',
     data: {
-      usertype: "consumer",
-      ...userData,
+      usertype: 'consumer',
+      ...userData
     },
     headers: {
-      Authorization: AUTHORIZATION,
-    },
-  });
-};
+      Authorization: AUTHORIZATION
+    }
+  })
+}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const LoginWrapper = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ export const LoginWrapper = styled.div`
     border-radius: 50%;
   }
   .container .drop::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50px;
     left: 85px;
@@ -47,7 +47,7 @@ export const LoginWrapper = styled.div`
     opacity: 0.9;
   }
   .container .drop::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 90px;
     left: 110px;
@@ -112,7 +112,7 @@ export const LoginWrapper = styled.div`
     overflow: hidden;
   }
   .container .drop .content form .inputBox::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 8px;
     left: 50%;
@@ -193,7 +193,7 @@ export const LoginWrapper = styled.div`
   }
 
   .btns::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 15px;
     left: 30px;
@@ -223,4 +223,4 @@ export const LoginWrapper = styled.div`
   .btns:hover {
     border-radius: 50%;
   }
-`;
+`

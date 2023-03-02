@@ -1,10 +1,10 @@
-import React, { memo } from "react";
-import { useNavigate } from "react-router-dom";
-import HotResume from "./c-cpns/hot-resume";
-import { HotTemplateWrapper } from "./style";
+import React, { memo } from 'react'
+import { useNavigate } from 'react-router-dom'
+import HotResume from './c-cpns/hot-resume'
+import { HotTemplateWrapper } from './style'
 
 const HotTemplate = memo((props) => {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   return (
     <HotTemplateWrapper>
       <div>
@@ -22,7 +22,11 @@ const HotTemplate = memo((props) => {
           <HotResume></HotResume>
           <HotResume></HotResume>
           <HotResume></HotResume>
-          <button alt="更多模板 立即使用" className="rt-bun" onClick={()=>navigate('/resumes')}>
+          <button
+            alt="更多模板 立即使用"
+            className="rt-bun"
+            onClick={() => navigate('/resumes')}
+          >
             <i>更</i>
             <i>多</i>
             <i>模</i>
@@ -36,9 +40,9 @@ const HotTemplate = memo((props) => {
         </div>
       </div>
     </HotTemplateWrapper>
-  );
-});
+  )
+})
 
-HotTemplate.propTypes = {};
+HotTemplate.propTypes = {}
 
-export default HotTemplate;
+export default HotTemplate

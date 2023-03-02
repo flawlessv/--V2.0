@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const TlistWrapper = styled.div`
   margin-top: 16px;
@@ -11,4 +11,4 @@ export const TlistWrapper = styled.div`
     /* justify-content: space-between; */
     background-color: #f5f5f5;
   }
-`;
+`

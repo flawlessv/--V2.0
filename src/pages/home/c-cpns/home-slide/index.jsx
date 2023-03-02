@@ -1,10 +1,10 @@
-import React, { memo } from "react";
-import { SlideWrapper } from "./style";
-import { Carousel } from "antd";
-import img1Src from "@/assets/img/img1.jpg";
-import img2Src from "@/assets/img/img2.jpg";
-import img3Src from "@/assets/img/img3.jpg";
-import img4Src from "@/assets/img/img2.jpg";
+import React, { memo } from 'react'
+import { SlideWrapper } from './style'
+import { Carousel } from 'antd'
+import img1Src from '@/assets/img/slide1.png'
+import img2Src from '@/assets/img/slide2.png'
+import img3Src from '@/assets/img/slide3.png'
+import img4Src from '@/assets/img/slide4.png'
 // import img1Src from "@/assets/img/img1.jpg";
 // import img2Src from "@/assets/img/img2.jpg";
 // import img3Src from "@/assets/img/img3.jpg";
@@ -27,7 +27,7 @@ const HomeSlide = memo(() => {
         </div>
       </Carousel>
     </SlideWrapper>
-  );
-});
+  )
+})
 
-export default HomeSlide;
+export default HomeSlide

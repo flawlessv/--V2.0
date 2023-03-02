@@ -1,9 +1,9 @@
-import React, { memo } from "react";
-import { BannerWrapper } from "./style";
-import { useNavigate } from "react-router-dom";
+import React, { memo } from 'react'
+import { BannerWrapper } from './style'
+import { useNavigate } from 'react-router-dom'
 
 const HomeBanner = memo(() => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <BannerWrapper>
       <h1 className="banner-title">名企精英都在用的专业简历</h1>
@@ -12,14 +12,14 @@ const HomeBanner = memo(() => {
       </p>
       <button
         className="button-33"
-        onClick={() => navigate("/details?resumeId=1")}
+        onClick={() => navigate('/details?resumeId=1')}
       >
         免费生成专业简历
       </button>
     </BannerWrapper>
-  );
-});
+  )
+})
 
 /* CSS */
 
-export default HomeBanner;
+export default HomeBanner

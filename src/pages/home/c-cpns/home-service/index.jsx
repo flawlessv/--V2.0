@@ -1,7 +1,7 @@
-import React, { memo } from "react";
-import { ServiceWrapper } from "./style";
-import ServiceSetion from "@/components/serviceSetion";
-import serviceData from "@/assets/data/resumeService";
+import React, { memo } from 'react'
+import { ServiceWrapper } from './style'
+import ServiceSetion from '@/components/serviceSetion'
+import serviceData from '@/assets/data/resumeService'
 const HomeService = memo(() => {
   return (
     <ServiceWrapper>
@@ -13,7 +13,7 @@ const HomeService = memo(() => {
         ></ServiceSetion>
       ))}
     </ServiceWrapper>
-  );
-});
+  )
+})
 
-export default HomeService;
+export default HomeService

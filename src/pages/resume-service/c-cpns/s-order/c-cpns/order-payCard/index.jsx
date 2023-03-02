@@ -1,55 +1,55 @@
-import React, { memo } from "react";
-import { Paywrapper } from "./style";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
-import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
-import { Button } from "@mui/material";
-import TextField from "@mui/material/TextField";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import { useRef } from "react";
-import Snackbar from "@mui/material/Snackbar";
-import MuiAlert from "@mui/material/Alert";
-import { useState } from "react";
+import React, { memo } from 'react'
+import { Paywrapper } from './style'
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout'
+import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline'
+import { Button } from '@mui/material'
+import TextField from '@mui/material/TextField'
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
+import { useRef } from 'react'
+import Snackbar from '@mui/material/Snackbar'
+import MuiAlert from '@mui/material/Alert'
+import { useState } from 'react'
 const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+})
 const PayCard = memo((props) => {
-  const remakeRef = useRef();
-  const { getRemake } = props;
-  const [openRemake, setOpenRemake] = React.useState(false);
-  const [open, setOpen] = React.useState(false);
-  const [msg, setMsg] = useState("");
+  const remakeRef = useRef()
+  const { getRemake } = props
+  const [openRemake, setOpenRemake] = React.useState(false)
+  const [open, setOpen] = React.useState(false)
+  const [msg, setMsg] = useState('')
   // 处理支付的函数
   const handleClick = (value) => {
-    setMsg(value);
-    setOpen(true);
-  };
+    setMsg(value)
+    setOpen(true)
+  }
 
   const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
+    if (reason === 'clickaway') {
+      return
     }
 
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   // 处理添加备注的dialog
   const handleClickOpen = () => {
-    setOpenRemake(true);
-  };
+    setOpenRemake(true)
+  }
   const handleCancel = () => {
-    handleClick("取消添加备注~");
-    setOpenRemake(false);
-  };
+    handleClick('取消添加备注~')
+    setOpenRemake(false)
+  }
   const handleOk = () => {
-    handleClick("添加备注成功~");
+    handleClick('添加备注成功~')
 
-    setOpenRemake(false);
-    getRemake(remakeRef.current.value);
-  };
+    setOpenRemake(false)
+    getRemake(remakeRef.current.value)
+  }
 
   return (
     <Paywrapper>
@@ -107,7 +107,7 @@ const PayCard = memo((props) => {
               variant="contained"
               color="success"
               startIcon={<ShoppingCartCheckoutIcon />}
-              onClick={() => handleClick("支付成功!")}
+              onClick={() => handleClick('支付成功!')}
             >
               立即支付
             </Button>
@@ -118,14 +118,14 @@ const PayCard = memo((props) => {
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
-        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
           {msg}
         </Alert>
       </Snackbar>
     </Paywrapper>
-  );
-});
+  )
+})
 
-export default PayCard;
+export default PayCard

@@ -1,25 +1,25 @@
-import React, { memo } from "react";
-import { ServiceSetionWrapper } from "./style";
-import classNames from "classnames";
-import { useDispatch, useSelector } from "react-redux";
-import { setCurrent } from "../../store/modules/service";
+import React, { memo } from 'react'
+import { ServiceSetionWrapper } from './style'
+import classNames from 'classnames'
+import { useDispatch, useSelector } from 'react-redux'
+import { setCurrent } from '../../store/modules/service'
 const ServiceSetion = memo((props) => {
   const {
     setionIndex,
-    data: { title, subtitle, imgSrc, liTitle, lis, pTitle, p1, p2 },
-  } = props;
+    data: { title, subtitle, imgSrc, liTitle, lis, pTitle, p1, p2 }
+  } = props
   const { current } = useSelector((state) => ({
-    current: state.service.current,
-  }));
-  const dispatch = useDispatch();
+    current: state.service.current
+  }))
+  const dispatch = useDispatch()
   const handleMouse = () => {
-    dispatch(setCurrent(setionIndex));
-  };
-  const isShow = setionIndex === current;
+    dispatch(setCurrent(setionIndex))
+  }
+  const isShow = setionIndex === current
   return (
     <ServiceSetionWrapper>
       <div
-        className={classNames("task_type_plate", { active: isShow })}
+        className={classNames('task_type_plate', { active: isShow })}
         onMouseEnter={() => handleMouse()}
       >
         <img className="task_type_plate_img" src={imgSrc} alt=""></img>
@@ -66,7 +66,7 @@ const ServiceSetion = memo((props) => {
         )}
       </div>
     </ServiceSetionWrapper>
-  );
-});
+  )
+})
 
-export default ServiceSetion;
+export default ServiceSetion

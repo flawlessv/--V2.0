@@ -20,6 +20,7 @@
     "axios": "^1.2.2",
     "blueimp-md5": "^2.19.0",
     "classnames": "^2.3.2",
+    "craco-less": "^2.1.0-alpha.0",
     "dayjs": "^1.11.7",
     "draft-js": "^0.11.7",
     "draftjs-to-html": "^0.9.1",
@@ -27,6 +28,7 @@
     "jspdf": "^2.5.1",
     "nanoid": "^4.0.1",
     "normalize.css": "^8.0.1",
+    "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draft-wysiwyg": "^1.15.0",
@@ -42,7 +44,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -61,5 +64,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1"
   }
 }

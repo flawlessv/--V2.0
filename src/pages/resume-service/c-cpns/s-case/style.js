@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ScaseWrapper = styled.div`
   padding: 120px 0;
@@ -45,4 +45,4 @@ export const ScaseWrapper = styled.div`
     }
   }
   ${(props) => props.theme.mixin.btnV1}
-`;
+`

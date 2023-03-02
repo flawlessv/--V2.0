@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ServiceSetionWrapper = styled.div`
   .task_type_plate {
@@ -20,7 +20,7 @@ export const ServiceSetionWrapper = styled.div`
       color: #666;
       font-size: 0;
       box-sizing: border-box;
-      font-family: "microsoft yahei";
+      font-family: 'microsoft yahei';
       margin: 0;
       padding: 0;
       border: 0;
@@ -50,7 +50,7 @@ export const ServiceSetionWrapper = styled.div`
       color: #666;
       font-size: 0;
       box-sizing: border-box;
-      font-family: "microsoft yahei";
+      font-family: 'microsoft yahei';
       margin: 0;
       padding: 0;
       border: none;
@@ -67,7 +67,7 @@ export const ServiceSetionWrapper = styled.div`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         text-decoration: none;
         position: absolute;
         bottom: 30px;
@@ -88,7 +88,7 @@ export const ServiceSetionWrapper = styled.div`
         color: #666;
         font-size: 0;
         box-sizing: border-box;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         margin: 0;
         padding: 0;
         border: none;
@@ -100,7 +100,7 @@ export const ServiceSetionWrapper = styled.div`
           color: #666;
           font-size: 0;
           box-sizing: border-box;
-          font-family: "microsoft yahei";
+          font-family: 'microsoft yahei';
           margin: 0;
           padding: 0;
           border: 0;
@@ -111,7 +111,7 @@ export const ServiceSetionWrapper = styled.div`
       }
       .task_type_plateactive_title {
         box-sizing: border-box;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         margin: 0;
         padding: 0;
         border: none;
@@ -125,7 +125,7 @@ export const ServiceSetionWrapper = styled.div`
       }
       .task_type_plateactive_msg {
         box-sizing: border-box;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         margin: 0;
         border: none;
         text-align: inherit;
@@ -143,7 +143,7 @@ export const ServiceSetionWrapper = styled.div`
       color: #666;
       font-size: 0;
       box-sizing: border-box;
-      font-family: "microsoft yahei";
+      font-family: 'microsoft yahei';
       margin: 0;
       padding: 0;
       border: none;
@@ -156,7 +156,7 @@ export const ServiceSetionWrapper = styled.div`
       transition: all 0.3s;
       .task_type_plateinit_title {
         box-sizing: border-box;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         margin: 0;
         padding: 0;
         border: none;
@@ -166,7 +166,7 @@ export const ServiceSetionWrapper = styled.div`
       }
       .task_type_plateinit_s_title {
         box-sizing: border-box;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         margin: 0;
         padding: 0;
         border: none;
@@ -177,7 +177,7 @@ export const ServiceSetionWrapper = styled.div`
       }
       .task_type_plateinit_content {
         box-sizing: border-box;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         margin: 0;
         padding: 0;
         border: none;
@@ -191,7 +191,7 @@ export const ServiceSetionWrapper = styled.div`
         color: #666;
         font-size: 0;
         box-sizing: border-box;
-        font-family: "microsoft yahei";
+        font-family: 'microsoft yahei';
         padding: 0;
         border: none;
         list-style: none;
@@ -200,7 +200,7 @@ export const ServiceSetionWrapper = styled.div`
         li {
           list-style: none;
           box-sizing: border-box;
-          font-family: "microsoft yahei";
+          font-family: 'microsoft yahei';
           margin: 0;
           padding: 0;
           border: none;
@@ -210,7 +210,7 @@ export const ServiceSetionWrapper = styled.div`
           color: #9c9c9c;
           line-height: 1.8;
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 6px;
             left: 2px;
@@ -232,4 +232,4 @@ export const ServiceSetionWrapper = styled.div`
       color: ${(props) => props.theme.color.primary};
     }
   }
-`;
+`

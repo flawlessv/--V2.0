@@ -1,15 +1,15 @@
-import React, { memo } from "react";
-import { useSelector } from "react-redux";
+import React, { memo } from 'react'
+import { useSelector } from 'react-redux'
 // import resumeInfo from "../../../../assets/data/resumeInfo";
-import AvatarInfo from "./c-cpns/Avatar";
-import { BaseInfoWrapper } from "./style";
+import AvatarInfo from './c-cpns/Avatar'
+import { BaseInfoWrapper } from './style'
 // 用户基本信息
 const UserInfo = memo(() => {
   const { baseInfo, jobIntent } = useSelector((state) => ({
     baseInfo: state.resume.resumeData.baseInfo,
-    jobIntent: state.resume.resumeData.jobIntent,
-  }));
-  const jobIntentInfo = Object.values(jobIntent);
+    jobIntent: state.resume.resumeData.jobIntent
+  }))
+  const jobIntentInfo = Object.values(jobIntent)
 
   return (
     <BaseInfoWrapper>
@@ -35,7 +35,7 @@ const UserInfo = memo(() => {
         <AvatarInfo />
       </div>
     </BaseInfoWrapper>
-  );
-});
+  )
+})
 
-export default UserInfo;
+export default UserInfo

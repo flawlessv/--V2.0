@@ -1,14 +1,14 @@
-import React, { memo, useState } from "react";
-import { TeamWrapper } from "./style";
+import React, { memo, useState } from 'react'
+import { TeamWrapper } from './style'
 
 const ResumeTeamItem = memo((props) => {
   //   const { name, options = "了解更多", introduce } = props;
-  const { data, option = "了解更多", getServerType } = props;
-  const [currentIndex, setcurrentIndex] = useState();
+  const { data, option = '了解更多', getServerType } = props
+  const [currentIndex, setcurrentIndex] = useState()
   const handleClick = (index) => {
-    setcurrentIndex(index);
-    getServerType(index);
-  };
+    setcurrentIndex(index)
+    getServerType(index)
+  }
   return (
     <TeamWrapper>
       <div className="cards">
@@ -80,8 +80,8 @@ const ResumeTeamItem = memo((props) => {
             </div>
             <button
               style={{
-                cursor: "pointer",
-                background: currentIndex === index ? "#2474dd" : "#fff",
+                cursor: 'pointer',
+                background: currentIndex === index ? '#2474dd' : '#fff'
               }}
               onClick={() => handleClick(index)}
             >
@@ -91,7 +91,7 @@ const ResumeTeamItem = memo((props) => {
         ))}
       </div>
     </TeamWrapper>
-  );
-});
+  )
+})
 
-export default ResumeTeamItem;
+export default ResumeTeamItem

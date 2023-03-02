@@ -1,23 +1,23 @@
-import React, { memo, useRef, useEffect } from "react";
-import { ResumeMainWrapper } from "./style";
-import { useReactToPrint } from "react-to-print";
-import { useDispatch } from "react-redux";
-import { fetchResumeInfoAction } from "@/store/modules/resumeInfo";
+import React, { memo, useRef, useEffect } from 'react'
+import { ResumeMainWrapper } from './style'
+import { useReactToPrint } from 'react-to-print'
+import { useDispatch } from 'react-redux'
+import { fetchResumeInfoAction } from '@/store/modules/resumeInfo'
 
-import UserInfo from "../../../../components/resume-info/c-cpns/user-info";
-import WorkExpe from "../../../../components/resume-info/c-cpns/work-expe";
-import SchoolExpe from "../../../../components/resume-info/c-cpns/school-expe";
-import ProjExpe from "../../../../components/resume-info/c-cpns/project-expe";
-import CertificateHonor from "../../../../components/resume-info/c-cpns/certificateHonor";
-import SelfEvaluation from "../../../../components/resume-info/c-cpns/selfEvaluation";
-import SkillSpecialties from "../../../../components/resume-info/c-cpns/skillSpecialties";
+import UserInfo from '../../../../components/resume-info/c-cpns/user-info'
+import WorkExpe from '../../../../components/resume-info/c-cpns/work-expe'
+import SchoolExpe from '../../../../components/resume-info/c-cpns/school-expe'
+import ProjExpe from '../../../../components/resume-info/c-cpns/project-expe'
+import CertificateHonor from '../../../../components/resume-info/c-cpns/certificateHonor'
+import SelfEvaluation from '../../../../components/resume-info/c-cpns/selfEvaluation'
+import SkillSpecialties from '../../../../components/resume-info/c-cpns/skillSpecialties'
 const ResumeMain = memo(() => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(fetchResumeInfoAction());
-  }, [dispatch]);
-  const pdfRef = useRef();
-  const downloadResume = useReactToPrint({ content: () => pdfRef.current });
+    dispatch(fetchResumeInfoAction())
+  }, [dispatch])
+  const pdfRef = useRef()
+  const downloadResume = useReactToPrint({ content: () => pdfRef.current })
   // {
   // exportPDF('测试导出PDF', pdfRef.current)
   // }
@@ -25,7 +25,10 @@ const ResumeMain = memo(() => {
     <ResumeMainWrapper>
       <div className="resume" ref={pdfRef}>
         {/* 下载按钮 */}
-        <button  className="cssbuttons-io-button" onClick={() => downloadResume()}>
+        <button
+          className="cssbuttons-io-button"
+          onClick={() => downloadResume()}
+        >
           <svg
             height="24"
             width="24"
@@ -52,7 +55,7 @@ const ResumeMain = memo(() => {
         </div>
       </div>
     </ResumeMainWrapper>
-  );
-});
+  )
+})
 
-export default ResumeMain;
+export default ResumeMain
