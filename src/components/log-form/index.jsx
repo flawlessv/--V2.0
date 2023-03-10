@@ -132,7 +132,7 @@ const LogForm = memo((props) => {
         code: msgCode
       })
     }
-
+    console.log(res, 'rrrrrrrrrrrrrrrrrrr')
     // 用户注册
     if (title === '注册') {
       res = await registerByMobile({
@@ -141,6 +141,7 @@ const LogForm = memo((props) => {
         username: userRef.current.value,
         password: pwdRef.current.value
       })
+      console.log(res, 'zhuce')
     }
     //判断是否操作成功
     if (res.code === 200) {
@@ -148,12 +149,17 @@ const LogForm = memo((props) => {
       if (title !== '注册') {
         const accessToken = res.data.accessToken
         const refreshToken = res.data.refreshToken
-        setToken('accessToken', accessToken)
-        setToken('refreshToken', refreshToken)
+        setToken('access_token', accessToken)
+        setToken('refresh_token', refreshToken)
+        console.log(res.data,'登录过后的data');
         dispatch(setUserInfo(res.data))
+        setTimeout(()=>{
+          navigate('/')
+        },500)
       }
     } else if (res.code === 400) {
       setAlertMsg({ msg: res.msg, success: true })
+      // navigate('/')
     } else {
       setAlertMsg({ msg: res.response.data.msg, success: false })
     }

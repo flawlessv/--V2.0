@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import HomeBanner from './c-cpns/home-banner'
 import HotTemplate from './c-cpns/home-hotTemplate'
 import HomeResume from './c-cpns/home-resumeImg'
@@ -13,6 +13,9 @@ import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 import HomeCharact from './c-cpns/home-charact'
 import HomeService from './c-cpns/home-service'
+import { getUserInfo } from '../../services'
+import { useDispatch } from 'react-redux'
+import { fetchUserInfoAction } from '../../store/modules/code'
 const Home = memo(() => {
   const charactData = [
     {
@@ -68,6 +71,11 @@ const Home = memo(() => {
       )
     }
   ]
+  const dispatch = useDispatch()
+  //获取用户信息
+  useEffect(() => {
+    dispatch(fetchUserInfoAction())
+  }, [])
   return (
     <HomeWrapper>
       <HomeBanner />

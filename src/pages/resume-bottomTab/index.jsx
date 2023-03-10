@@ -27,16 +27,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800]
 }))
 
-// const Puller = styled(Box)(({ theme }) => ({
-//     width: 30,
-//     height: 6,
-//     backgroundColor: theme.palette.mode === 'light' ? grey[300] : grey[900],
-//     borderRadius: 3,
-//     position: 'absolute',
-//     top: 8,
-//     left: 'calc(50% - 15px)',
-// }));
-
 function SwipeableEdgeDrawer(props) {
   const { window } = props
   const [open, setOpen] = React.useState(false)
@@ -47,6 +37,7 @@ function SwipeableEdgeDrawer(props) {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen)
   }
+
   const createTime = dayjs().format('YYYY-MM-DD')
   const container =
     window !== undefined ? () => window().document.body : undefined
@@ -65,8 +56,8 @@ function SwipeableEdgeDrawer(props) {
         <CssBaseline />
         <Snackbar
           open={msgOpen}
-          autoHideDuration={500}
           message="保存简历成功"
+          autoHideDuration={6000}
         />
         <Global
           styles={{
@@ -141,14 +132,6 @@ function SwipeableEdgeDrawer(props) {
       </Root>
     </DingZhiWrapper>
   )
-}
-
-SwipeableEdgeDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func
 }
 
 export default SwipeableEdgeDrawer

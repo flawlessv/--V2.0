@@ -5,7 +5,7 @@ export const TabsWrapper = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: center;
-
+    /* ${props=>(props.path==='/login'||props.path==='/register')} */
     .tabs {
       font-weight: 400;
       font-size: 16px;

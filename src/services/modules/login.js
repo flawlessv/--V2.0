@@ -1,5 +1,6 @@
 import hyRequest from '..'
 import { AUTHORIZATION } from '../request/config'
+import { getToken, ACCESS_TOKEN, REFRESH_TOKEN } from '../../utils/auth'
 // 获取图片验证码
 export const getCodeRequest = () => {
   return hyRequest.get({
@@ -22,6 +23,12 @@ export const loginByUsername = ({ username, password, code, key }) => {
       key,
       Authorization: AUTHORIZATION
     }
+  })
+}
+//获取用户信息
+export const getUserInfo = () => {
+  return hyRequest.get({
+    url: '/mate-uaa/auth/get/user'
   })
 }
 //手机验证码下发
@@ -58,6 +65,27 @@ export const registerByMobile = (userData) => {
     },
     headers: {
       Authorization: AUTHORIZATION
+    }
+  })
+}
+// 退出登录
+export const logOut = () => {
+  return hyRequest.post({
+    url: '/mate-uaa/auth/logout',
+    headers: {
+      'Mate-Auth': getToken(ACCESS_TOKEN)
+    }
+  })
+}
+// 刷新 access_token 的接口
+export const refreshToken = () => {
+  console.log(getToken(REFRESH_TOKEN));
+  return hyRequest.post({
+    url: '/mate-uaa/oauth/token',
+    data: {
+      grant_type: 'refresh_token',
+      scope: 'all',
+      refresh_token: getToken(REFRESH_TOKEN)
     }
   })
 }

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React, { memo, forwardRef, useState } from 'react'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button'
 import { useDispatch } from 'react-redux'
 import { getMobileCode } from '../../../../services'
 
@@ -33,17 +32,6 @@ const MobileLog = memo(
           inputRef={ref}
           onBlur={() => handleCheck()}
         />
-        {/* {btn && <Button
-                // disabled={validCode}
-                onClick={() => handleGetValidCode()}
-                sx={{
-                    position: 'absolute',
-                    top: 86,
-                    right: 5,
-                    fontSize: '12px'
-                }}
-            >
-                btn</Button>} */}
       </Box>
     )
   })

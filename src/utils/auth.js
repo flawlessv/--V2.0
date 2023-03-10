@@ -1,9 +1,8 @@
+export const ACCESS_TOKEN = 'access_token'
+export const REFRESH_TOKEN = 'refresh_token'
 // 获取token
-export function getAccessToken() {
-  return localStorage.getItem('accessToken')
-}
-export function getRefreshToken() {
-  return localStorage.getItem('refreshToken')
+export function getToken(name) {
+  return localStorage.getItem(name)
 }
 
 // 设置token
@@ -13,12 +12,5 @@ export function setToken(name, token) {
 
 // 判断token是否存在
 export function isLogined() {
-  if (
-    localStorage.getItem('refreshToken') ||
-    localStorage.getItem('accessToken')
-  ) {
-    return true
-  } else {
-    return false
-  }
+  return localStorage.getItem(REFRESH_TOKEN) ? true : false
 }

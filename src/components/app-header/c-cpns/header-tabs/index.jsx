@@ -2,11 +2,12 @@ import React from 'react'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Box from '@mui/material/Box'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { TabsWrapper } from './style'
 
 export default function HeaderTabs() {
   const [value, setValue] = React.useState(0)
+  const location=useLocation()
   const navigate = useNavigate()
   const tabDatas = [
     {
@@ -19,19 +20,19 @@ export default function HeaderTabs() {
     },
     {
       name: '简历服务',
-      path: '/guide'
+      path: '/service'
     },
     {
       name: '名企热招',
-      path: '/guide'
+      path: '/company'
     },
     {
       name: '简历定制',
       path: '/customized'
     },
     {
-      name: '求职攻略',
-      path: '/guide'
+      name: '简历规划师',
+      path: '/teacher'
     }
   ]
   const handleChange = (event, newValue) => {
@@ -42,7 +43,7 @@ export default function HeaderTabs() {
   }
 
   return (
-    <TabsWrapper>
+    <TabsWrapper path={location}>
       <Tabs
         value={value}
         onChange={handleChange}

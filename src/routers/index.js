@@ -20,6 +20,8 @@ import MyOrder from '@/pages/my/c-cpns/my-order'
 import MyResume from '@/pages/my/c-cpns/my-resume'
 import UploadTemplate from '@/pages/my/c-cpns/upload-template'
 import Popularize from '@/pages/my/c-cpns/popularize'
+import ResumeTeacher from '../pages/teacher'
+import ResumeCompany from '../pages/resume-company'
 const routes = [
   {
     path: '/',
@@ -34,7 +36,7 @@ const routes = [
     element: <Register />
   },
   {
-    path: '/guide',
+    path: '/service',
     element: <ResumeService />
   },
   {
@@ -45,9 +47,14 @@ const routes = [
     path: '/customized',
     element: <ResumeDetails />
   },
+  { path: '/company', element: <ResumeCompany /> },
   {
     path: '/details',
     element: <ResumeDetails />
+  },
+  {
+    path: '/teacher',
+    element: <ResumeTeacher />
   },
   {
     path: '/',
