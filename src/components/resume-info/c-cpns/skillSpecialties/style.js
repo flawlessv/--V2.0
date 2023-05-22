@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const ProjExpeWrapper = styled.div`
-  margin-top: 30px;
   .editor-content {
     font: 12px/1.5 Helvetica Neue, Arial, PingFang SC, Microsoft YaHei, SimSun,
       sans-serif;

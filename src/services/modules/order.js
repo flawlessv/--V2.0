@@ -35,3 +35,10 @@ export const deleteOrder = (id) => {
     url: `/resume-order/order/${id}`
   })
 }
+//上窜模板
+export const uploadTemplate = (data) => {
+  return hyRequest.post({
+    url: '/resume-serve/Template/add',
+    data: data
+  })
+}

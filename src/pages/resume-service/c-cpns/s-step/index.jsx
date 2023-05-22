@@ -38,7 +38,7 @@ const Sstep = memo(() => {
             {stepData.map((item, index) => (
               <li key={item.title}>
                 <h4>{item.title}</h4>
-                <p>填{item.content}</p>
+                <p>{item.content}</p>
                 <i>
                   <KeyboardDoubleArrowRightIcon
                     sx={{ display: index === 4 ? 'none' : 'block' }}

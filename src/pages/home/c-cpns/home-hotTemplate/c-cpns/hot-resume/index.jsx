@@ -1,18 +1,25 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import Button from '@mui/material-next/Button'
 import Chip from '@mui/material/Chip'
 import { HotResumeWrapper } from './style'
 import defalutImgUrl from '@/assets/img/template1.png'
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
+import LazyImage from '../../../../../../components/lazy-img'
 const HotResume = memo((props) => {
   const { imgUrl = defalutImgUrl } = props
   const tagData = ['6种语言', '封面', '自荐信']
+  const imgRef=useRef()
+
+ 
   return (
     <HotResumeWrapper url={imgUrl}>
-      <div className="hot-content">
+      <div className="hot-content" ref={imgRef}>
         <div className="hot-cover">
-          <div className="hot-img"></div>
+          <div className="hot-img"><LazyImage src={imgUrl} alt='hehe'></LazyImage></div>
+          
           <div className="hot-cover-mask"></div>
-          <a href="/details?resumeId=1" target={'_blank'} rel="noreferrer">
+          <Link to="/customized/3">
             <Button
               color="primary"
               size="large"
@@ -21,7 +28,7 @@ const HotResume = memo((props) => {
             >
               立即使用
             </Button>
-          </a>
+          </Link>
 
           <div className="tag-box">
             <div className="tags">

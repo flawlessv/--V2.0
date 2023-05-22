@@ -14,6 +14,7 @@ class HYRequest {
       (config) => {
         //使用ACCESS_TOKEN判断用户是否登录
         if (isLogined()) {
+          console.log('用户已经登陆');
           config.headers['Mate-Auth'] = getToken(ACCESS_TOKEN)
         }
         return config
@@ -29,9 +30,10 @@ class HYRequest {
         return res.data
       },
       (err) => {
-        console.log(err, 'response err')
+        console.log(err, `response err---${err.response.status}`)
         //如果ACCESS_TOKEN过期的话，使用，REFRESH_TOKEN获取新的ACCESS_TOKEN
         if (err.response.status === 401) {
+          console.log('401');
           //判断是否正在进行token刷新
           if (!isRefreshing && err.response.config.url === '/mate-uaa/auth/get/user') {
             isRefreshing = true
@@ -43,6 +45,7 @@ class HYRequest {
                 //设置新的token
                 setToken(ACCESS_TOKEN, access_token)
                 setToken(REFRESH_TOKEN, refresh_token)
+                
                 config.headers['Mate-Auth'] = access_token
                 return this.instance(config)
               })

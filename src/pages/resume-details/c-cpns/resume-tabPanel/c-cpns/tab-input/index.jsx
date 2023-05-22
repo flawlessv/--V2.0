@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { setBaseInfo, setJobIntent } from '@/store/modules/resumeInfo'
 import TextField from '@mui/material/TextField'
 const TabInput = memo((props) => {
@@ -11,7 +11,7 @@ const TabInput = memo((props) => {
   const { baseInfo, jobIntent } = useSelector((state) => ({
     baseInfo: state.resume.resumeData.baseInfo,
     jobIntent: state.resume.resumeData.jobIntent
-  }))
+  }),shallowEqual)
   const handleInputChange = (e) => {
     const value = e.target.value
     isIntent
@@ -24,7 +24,7 @@ const TabInput = memo((props) => {
       id="outlined-required"
       label={label}
       type={name === 'age' ? 'number' : name}
-      defaultValue={label.defaultValue || ''}
+      defaultValue={baseInfo[name]||jobIntent[name]}
       InputProps={
         {
           // endAdornment: <InputAdornment position="end">kg</InputAdornment>,

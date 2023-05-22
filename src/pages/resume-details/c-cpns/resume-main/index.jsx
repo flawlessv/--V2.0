@@ -1,7 +1,7 @@
-import React, { memo, useRef, useEffect } from 'react'
+import React, { memo, useRef, useEffect, Fragment } from 'react'
 import { ResumeMainWrapper } from './style'
 import { useReactToPrint } from 'react-to-print'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { fetchResumeInfoAction } from '@/store/modules/resumeInfo'
 
 import UserInfo from '../../../../components/resume-info/c-cpns/user-info'
@@ -11,6 +11,9 @@ import ProjExpe from '../../../../components/resume-info/c-cpns/project-expe'
 import CertificateHonor from '../../../../components/resume-info/c-cpns/certificateHonor'
 import SelfEvaluation from '../../../../components/resume-info/c-cpns/selfEvaluation'
 import SkillSpecialties from '../../../../components/resume-info/c-cpns/skillSpecialties'
+import ResumeHeader from '../../../../components/resume-info/c-cpns/resume-header'
+import { useNavigate, useParams } from 'react-router-dom'
+import { setIsOpenTab } from '../../../../store/modules/editResume'
 const ResumeMain = memo(() => {
   const dispatch = useDispatch()
   useEffect(() => {
@@ -18,9 +21,27 @@ const ResumeMain = memo(() => {
   }, [dispatch])
   const pdfRef = useRef()
   const downloadResume = useReactToPrint({ content: () => pdfRef.current })
-  // {
-  // exportPDF('测试导出PDF', pdfRef.current)
-  // }
+
+  const navigator = useNavigate()
+  const prams = useParams()
+  //更换模板
+  const changeTemplate = () => {
+    let id = 0
+    if (prams.id === '1') {
+      id = 2
+    }
+    if (prams.id === '2') {
+      id = 3
+    }
+    if (prams.id === '3') {
+      id = 1
+    }
+    navigator(`/customized/${id}`)
+  }
+  const handleUserInfoClick = () => {
+    console.log('handleUserInfoClick')
+    dispatch(setIsOpenTab(true))
+  }
   return (
     <ResumeMainWrapper>
       {/* 下载按钮 */}
@@ -39,9 +60,19 @@ const ResumeMain = memo(() => {
         </svg>
         <span>下载简历</span>
       </button>
+      <button
+        className="cssbuttons-io-button btn2"
+        onClick={() => changeTemplate()}
+      >
+        <span>更换模板</span>
+      </button>
       <div className="resume" ref={pdfRef}>
+        <ResumeHeader></ResumeHeader>
         {/* 简历信息 */}
-        <UserInfo></UserInfo>
+        <div onClick={handleUserInfoClick}>
+        <UserInfo ></UserInfo>
+      
+         
         <div className="resume_content">
           <SkillSpecialties></SkillSpecialties>
           <WorkExpe></WorkExpe>
@@ -50,6 +81,7 @@ const ResumeMain = memo(() => {
           <CertificateHonor></CertificateHonor>
           <SelfEvaluation></SelfEvaluation>
         </div>
+      </div>
       </div>
     </ResumeMainWrapper>
   )

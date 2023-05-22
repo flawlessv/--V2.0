@@ -7,12 +7,14 @@ import { grey } from '@mui/material/colors'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
-import DrawerTabs from '../resume-details/c-cpns/drawer-tabs'
-import { useSelector } from 'react-redux'
+import DrawerTabs from '../../pages/resume-details/c-cpns/drawer-tabs'
+import { useDispatch, useSelector } from 'react-redux'
 import { setResumeInfo } from '../../services/modules/resume'
 import Snackbar from '@mui/material/Snackbar'
 import dayjs from 'dayjs'
 import { DingZhiWrapper } from './style'
+import { setIsOpenTab } from '../../store/modules/editResume'
+import { message } from 'antd'
 const drawerBleeding = 56
 
 const Root = styled('div')(({ theme }) => ({
@@ -29,21 +31,30 @@ const StyledBox = styled(Box)(({ theme }) => ({
 
 function SwipeableEdgeDrawer(props) {
   const { window } = props
-  const [open, setOpen] = React.useState(false)
+
+  // const [open, setOpen] = React.useState(isOpenTab)
+  const dispatch = useDispatch()
   const [msgOpen, setMsgOpen] = React.useState(false)
   const { resumeData } = useSelector((state) => ({
     resumeData: state.resume.resumeData
   }))
+  const { isOpenTab } = useSelector((state) => ({
+    isOpenTab: state.edit.isOpenTab
+  }))
+  // console.log(isOpenTab, 'isOpenTab')
   const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen)
+    dispatch(setIsOpenTab(newOpen))
+    // setOpen(newOpen)
   }
 
   const createTime = dayjs().format('YYYY-MM-DD')
   const container =
     window !== undefined ? () => window().document.body : undefined
   const handleClose = () => {
-    setOpen(false)
+    // setOpen(false)
+    dispatch(setIsOpenTab(false))
     //发送dispatch
+    message.success('修改简历成功！')
     setResumeInfo(resumeData, createTime).then((res) => {
       if (res.code === 200) {
         setMsgOpen(true)
@@ -102,7 +113,7 @@ function SwipeableEdgeDrawer(props) {
         <SwipeableDrawer
           container={container}
           anchor="bottom"
-          open={open}
+          open={isOpenTab}
           onClose={handleClose}
           onOpen={toggleDrawer(true)}
           swipeAreaWidth={drawerBleeding}

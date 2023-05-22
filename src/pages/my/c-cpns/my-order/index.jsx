@@ -85,19 +85,36 @@ const MyOrder = memo(() => {
   const [open, setOpen] = useState(false)
   const [currentid, setCurrentId] = useState(0)
   const dispatch = useDispatch()
-
+  const { userInfo } = useSelector((state) => ({
+    userInfo: state.login.userInfo
+  }))
   // 获取订单数据
   useEffect(() => {
-    dispatch(fetchOrderInfoAction({ pageSize: 4, userId: 7, pageNum: 1 }))
+    dispatch(
+      fetchOrderInfoAction({
+        pageSize: 4,
+        userId: userInfo.userId || 2,
+        pageNum: 1
+      })
+    )
   }, [dispatch])
   const { orderInfo, orderTotal } = useSelector((state) => ({
     orderInfo: state.order.orderInfo,
     orderTotal: state.order.orderTotal
   }))
+  const orderState = [
+    '派单中',
+    '已接单',
+    '',
+    '已完成',
+    '存疑',
+    '已取消',
+    '退款中'
+  ]
   const myData = orderInfo.map((item, index) => ({
     ...item,
     key: index + 1,
-    tag: item.state === 0 ? '进行中' : '已完成',
+    tag: orderState[item.state],
     serveType: item.serveType === 0 ? '普通服务' : '特殊服务'
   }))
   //  处理订单分页
@@ -153,6 +170,11 @@ const MyOrder = memo(() => {
       key: 'integral'
     },
     {
+      title: '创建时间',
+      dataIndex: 'createTime',
+      key: 'createTime'
+    },
+    {
       title: '订单备注',
       dataIndex: 'remake',
       key: 'remake'
@@ -163,7 +185,7 @@ const MyOrder = memo(() => {
       dataIndex: 'tag',
       render: (_, { tag }) => (
         <>
-          <Tag color={tag === '进行中' ? 'green' : 'volcano'} key={tag}>
+          <Tag color={tag === '派单中' ? 'green' : 'volcano'} key={tag}>
             {tag}
           </Tag>
         </>

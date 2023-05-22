@@ -1,7 +1,6 @@
 import React, { memo, useEffect } from 'react'
 import HomeBanner from './c-cpns/home-banner'
 import HotTemplate from './c-cpns/home-hotTemplate'
-import HomeResume from './c-cpns/home-resumeImg'
 import HomeSlide from './c-cpns/home-slide'
 import { HomeWrapper } from './style'
 //简历特点
@@ -13,9 +12,8 @@ import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 import HomeCharact from './c-cpns/home-charact'
 import HomeService from './c-cpns/home-service'
-import { getUserInfo } from '../../services'
 import { useDispatch } from 'react-redux'
-import { fetchUserInfoAction } from '../../store/modules/code'
+import { fetchUserInfoAction } from '../../store/modules/login'
 const Home = memo(() => {
   const charactData = [
     {
@@ -73,14 +71,17 @@ const Home = memo(() => {
   ]
   const dispatch = useDispatch()
   //获取用户信息
+  let time = Date.now()
+  // console.log(time)
   useEffect(() => {
+    let time2 = Date.now()
+    console.log(time2 - time)
     dispatch(fetchUserInfoAction())
-  }, [])
+  }, [dispatch,time])
   return (
     <HomeWrapper>
       <HomeBanner />
       <HomeSlide />
-      <HomeResume />
       <HotTemplate />
       <div className="homeCharact">
         <h3>全民简历特点</h3>

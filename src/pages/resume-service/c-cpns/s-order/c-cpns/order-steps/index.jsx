@@ -15,6 +15,7 @@ import { createOrderInfo } from '../../../../../../services/modules/order'
 import Snackbar from '@mui/material/Snackbar'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
+import { useSelector } from 'react-redux'
 const steps = ['选择服务类型', '挑选简历服务师', '付款']
 
 export default function HorizontalLinearStepper() {
@@ -22,7 +23,9 @@ export default function HorizontalLinearStepper() {
   const navigate = useNavigate()
   const [skipped, setSkipped] = React.useState(new Set())
   const [open, setOpen] = React.useState(false)
-
+  const { userInfo } = useSelector((state) => ({
+    userInfo: state.login.userInfo
+  }))
   const handleClick = () => {
     setOpen(true)
   }
@@ -82,15 +85,15 @@ export default function HorizontalLinearStepper() {
     }
   ]
   const orderObj = {
-    createTime: '',
+    createTime: new Date().getTime(),
     endTime: '',
-    integral: Math.floor(Math.random() * 10),
-    orderId: Math.floor(Math.random() * 10000000),
+    integral: 0,
+    industry: '',
     remake: '',
     serveId: 1,
     serveType: 0,
     state: 0,
-    userId: 7
+    userId: userInfo.id || 2
   }
   const isStepOptional = (step) => {
     return step === 1
@@ -115,9 +118,6 @@ export default function HorizontalLinearStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1)
   }
 
-  const handleReset = () => {
-    setActiveStep(0)
-  }
   //获取服务类型
   const getServiceType = (value) => {
     orderObj.serveType = value
@@ -126,13 +126,16 @@ export default function HorizontalLinearStepper() {
   const getServerType = (value) => {
     orderObj.serveId = value
   }
-  //获取订单备注
-  const getRemake = (value) => {
-    orderObj.remake = value
+  //获取订单备注和产业类型
+  const getRemake = (remake, industry) => {
+    orderObj.remake = remake
+    orderObj.industry = industry
   }
   //创建订单
   const handleCreateOrder = async () => {
+    console.log(orderObj, 'orderObj')
     const res = await createOrderInfo(orderObj)
+    console.log(res);
     if (res.code === 200) {
       handleClick()
       setActiveStep(3)

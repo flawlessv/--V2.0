@@ -6,17 +6,21 @@ export const fetchResumeDataAction = createAsyncThunk(
   async (payload, { dispatch }) => {
     const res = await getResumeContent()
     dispatch(setResumeInfo(res))
-    console.log(res)
   }
 )
 const editResumeSlice = createSlice({
   name: 'editResume',
-  initialState: {},
+  initialState: {
+    isOpenTab:false
+  },
   reducers: {
     setResumeInfo(state, { payload }) {
       state = payload
+    },
+    setIsOpenTab(state, { payload }) {
+      state.isOpenTab = payload
     }
   }
 })
-export const { setResumeInfo } = editResumeSlice.actions
-export default editResumeSlice
+export const { setResumeInfo,setIsOpenTab } = editResumeSlice.actions
+export default editResumeSlice.reducer

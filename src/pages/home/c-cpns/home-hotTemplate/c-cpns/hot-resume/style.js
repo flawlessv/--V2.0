@@ -17,11 +17,15 @@ export const HotResumeWrapper = styled.div`
       .hot-img {
         width: 100%;
         height: 422px;
-        background-position: center 0;
+        /* background-position: center 0;
         background-size: cover;
         background-repeat: no-repeat;
         background-color: #fff;
-        background-image: url(${(props) => props.url});
+        background-image: url(${(props) => props.url}); */
+        img{
+          width: 100%;
+          height: 100%;
+        }
       }
       transition: all 0.5s;
       &:hover {

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo, useState } from 'react'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
@@ -8,7 +7,6 @@ import Input from '@mui/material/Input'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
 import { useDispatch, useSelector } from 'react-redux'
 import Divider from '@mui/material/Divider'
-// import { setBaseInfo } from "@/store/modules/resumeInfo";
 import { useRef } from 'react'
 import { BasicInfoTabWrapper } from './style'
 // 个人基本信息组件
@@ -95,7 +93,7 @@ const BasicInfoTab = memo((props) => {
     }
     // setBasicInfoTabDataSource([...BasicInfoTabDataSource,newData ])
     setNewTabDataSource([...newTabDataSource, newData])
-    dispatch(setBasicInfo({ ...baseInfo, [label]: value }))
+    // dispatch(setBasicInfo({ ...baseInfo, [label]: value }))
   }
   // 删除新增信息
   const deleteExtraBasicInfo = (name) => {

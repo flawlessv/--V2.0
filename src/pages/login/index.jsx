@@ -2,7 +2,7 @@ import React, { memo, useEffect } from 'react'
 import LogForm from '../../components/log-form'
 import { LoginWrapper } from './style'
 import { useDispatch } from 'react-redux'
-import { fetchCodeUrlAction } from '../../store/modules/code'
+import { fetchCodeUrlAction } from '../../store/modules/login'
 const Login = memo(() => {
   const dispatch = useDispatch()
   // 获取图片验证码

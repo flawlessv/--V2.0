@@ -29,3 +29,11 @@ a {
   width: 210px;
   height: 40px;
 }
+.app {
+  position: relative;
+  background-image: linear-gradient(324deg, #c09574, #976e7d, #6b4983, #2d2787);
+}
+
+.home {
+  padding-top: 50px;
+}

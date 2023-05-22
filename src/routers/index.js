@@ -1,27 +1,38 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
-// const Home = React.lazy(() => import('../pages/home'))
-// const Login = React.lazy(() => import('../pages/login'))
-// const Register = React.lazy(() => import('../pages/register'))
-// const ResumeService = React.lazy(() => import('../pages/resume-service'))
-// const TemplateList = React.lazy(() => import('../pages/template-list'))
-// const ResumeCustomized = React.lazy(() => import('../pages/resume-dingzhi'))
-import Home from '../pages/home'
-import Login from '../pages/login'
-import Register from '../pages/register'
-import ResumeService from '../pages/resume-service'
-import TemplateList from '../pages/template-list'
-// import ResumeCustomized from "../pages/resume-bottomTab";
+// import My from '@/pages/my'
+// import MyInfo from '@/pages/my/c-cpns/my-info'
+// import MyOrder from '@/pages/my/c-cpns/my-order'
+// import MyResume from '@/pages/my/c-cpns/my-resume'
+// import UploadTemplate from '@/pages/my/c-cpns/upload-template'
+// import Popularize from '@/pages/my/c-cpns/popularize'
+// import ResumeTeacher from '../pages/teacher'
+// import ResumeCompany from '../pages/resume-company'
 import ResumeDetails from '../pages/resume-details'
+const My = React.lazy(() => import('@/pages/my'))
+const MyInfo = React.lazy(() => import('@/pages/my/c-cpns/my-info'))
+const MyOrder = React.lazy(() => import('@/pages/my/c-cpns/my-order'))
+const MyResume = React.lazy(() => import('@/pages/my/c-cpns/my-resume'))
+const UploadTemplate = React.lazy(() => import('@/pages/my/c-cpns/upload-template'))
+const Popularize = React.lazy(() => import('@/pages/my/c-cpns/popularize'))
+const ResumeTeacher = React.lazy(() => import('../pages/teacher'))
+const ResumeCompany = React.lazy(() => import('../pages/resume-company'))
+
+//一级路由
+const Home = React.lazy(() => import('../pages/home'))
+const Login = React.lazy(() => import('../pages/login'))
+const Register = React.lazy(() => import('../pages/register'))
+const ResumeService = React.lazy(() => import('../pages/resume-service'))
+const TemplateList = React.lazy(() => import('../pages/template-list'))
+// const ResumeDetails = React.lazy(() => import('../pages/resume-details'))
+// import Home from '../pages/home'
+// import Login from '../pages/login'
+// import Register from '../pages/register'
+// import ResumeService from '../pages/resume-service'
+// import TemplateList from '../pages/template-list'
+// // import ResumeCustomized from "../pages/resume-bottomTab";
 //我的模块
-import My from '@/pages/my'
-import MyInfo from '@/pages/my/c-cpns/my-info'
-import MyOrder from '@/pages/my/c-cpns/my-order'
-import MyResume from '@/pages/my/c-cpns/my-resume'
-import UploadTemplate from '@/pages/my/c-cpns/upload-template'
-import Popularize from '@/pages/my/c-cpns/popularize'
-import ResumeTeacher from '../pages/teacher'
-import ResumeCompany from '../pages/resume-company'
+
 const routes = [
   {
     path: '/',
@@ -44,7 +55,7 @@ const routes = [
     element: <TemplateList />
   },
   {
-    path: '/customized',
+    path: '/customized/:id',
     element: <ResumeDetails />
   },
   { path: '/company', element: <ResumeCompany /> },

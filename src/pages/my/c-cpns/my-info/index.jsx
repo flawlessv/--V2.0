@@ -8,7 +8,7 @@ const MyInfo = memo(() => {
   const {
     userInfo: { avatar, tenantId, roleId, userId, userName }
   } = useSelector((state) => ({
-    userInfo: state.code.userInfo
+    userInfo: state.login.userInfo
   }))
   return (
     <MyInfoWrapper>

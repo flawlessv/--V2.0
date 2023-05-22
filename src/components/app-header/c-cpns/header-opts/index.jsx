@@ -11,16 +11,18 @@ import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import Settings from '@mui/icons-material/Settings'
 import Logout from '@mui/icons-material/Logout'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { message } from 'antd'
 import { logOut } from '../../../../services'
+import { setIsLogin } from '../../../../store/modules/login'
 const HeaderOpts = memo(() => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const [anchorEl, setAnchorEl] = React.useState(null)
-  const [login,setlogin]=useState(localStorage.getItem('access_token')?true:false)
+  const { login } = useSelector((state) => ({ login: state.login.login }))
   const { avatar, userName = '超级管理员7' } = useSelector((state) => ({
-    avatar: state?.code?.userInfo?.avatar,
-    userName: state?.code?.userInfo?.userName
+    avatar: state?.login?.userInfo?.avatar,
+    userName: state?.login?.userInfo?.userName
   }))
   const hanleAvatarClick = () => {
     navigate('/my/myinfo')
@@ -29,10 +31,9 @@ const HeaderOpts = memo(() => {
   const handleLogout = () => {
     logOut().then((res) => {
       // console.log(res,'logout');
-      console.log(res, 'logres')
       if (res.code === 200) {
         localStorage.clear()
-        setlogin(false)
+        dispatch(setIsLogin(false))
         message.success(res.msg)
       } else {
         message.success(res.msg)
@@ -116,11 +117,11 @@ const HeaderOpts = memo(() => {
             <Avatar src="https://img0.baidu.com/it/u=3240651741,1461690041&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333" />{' '}
             {userName}
           </MenuItem>
-          <MenuItem>
-            <Avatar onClick={hanleAvatarClick} /> 个人中心
+          <MenuItem onClick={hanleAvatarClick}>
+            <Avatar /> 个人中心
           </MenuItem>
-          <MenuItem>
-            <Avatar onClick={hanleAvatarClick} /> 我的账户
+          <MenuItem onClick={hanleAvatarClick}>
+            <Avatar /> 我的账户
           </MenuItem>
           <Divider />
           <MenuItem>

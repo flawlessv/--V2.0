@@ -18,7 +18,6 @@ const orderSlice = createSlice({
   },
   reducers: {
     setOrderOpen(state, { payload }) {
-      // console.log(payload);
       state.orderOpen = payload
     },
     setOrderInfo(state, { payload }) {

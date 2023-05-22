@@ -53,6 +53,7 @@ export const ResumeMainWrapper = styled.div`
   }
   .resume {
     position: relative;
+    padding: 20px;
   }
   .resume_content {
     color: #333;
@@ -62,5 +63,10 @@ export const ResumeMainWrapper = styled.div`
     padding-top: 2px;
     position: relative;
     margin: 0 30px 0;
+  }
+  .btn2{
+    right: -185px;
+    top: 170px;
+    background-color: #3cefff!important;
   }
 `

@@ -29,6 +29,7 @@ const AvatarInfo = () => {
       // Get this url from response in real world.
       getBase64(info.file.originFileObj, (url) => {
         setLoading(false)
+        console.log(url)
         setImageUrl(url)
       })
     }
@@ -41,7 +42,7 @@ const AvatarInfo = () => {
           marginTop: 8
         }}
       >
-        Upload
+        上传照片
       </div>
     </div>
   )
@@ -52,8 +53,7 @@ const AvatarInfo = () => {
         listType="picture-card"
         className="avatar-uploader"
         showUploadList={false}
-        // action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-        beforeUpload={beforeUpload}
+        // beforeUpload={beforeUpload}
         onChange={handleChange}
       >
         {imageUrl ? (

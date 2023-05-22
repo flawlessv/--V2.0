@@ -3,7 +3,7 @@ import React, { memo, forwardRef, useState, useEffect } from 'react'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import { useDispatch } from 'react-redux'
-import { fetchCodeUrlAction } from '../../../../store/modules/code'
+import { fetchCodeUrlAction } from '../../../../store/modules/login'
 
 const InputItem = memo(
   forwardRef((props, ref) => {

@@ -9,7 +9,7 @@
  */
 import { useEffect, useState, useRef } from 'react'
 let lockReconnect = false // 避免重复连接
-const heartCheckSecond = 30 * 1000 // 心跳检测间隔时长
+// const heartCheckSecond = 30 * 1000 // 心跳检测间隔时长
 
 function useSocket(url, info) {
   const [wsData, setWsData] = useState({}) // 接收的消息
@@ -55,6 +55,7 @@ function useSocket(url, info) {
     }
 
     wsRef.current.onmessage = function (evt) {
+      console.log(evt,'evt');
       var data = JSON.parse(evt.data) // 接收消息string=>json
       setWsData(data)
       // heartParams && heartCheck.reset().start()

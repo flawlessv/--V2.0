@@ -24,10 +24,9 @@ const AppFooter = memo((props) => {
   ]
   return (
     <FooterWrapper path={location.pathname}>
-      {/* <div className="footer-content"> */}
-      <p className="footer-title">在线简历，专业简历制作指导服务平台！</p>
+      <p className="footer-title">简历魔法屋，专业简历制作指导服务平台！</p>
       <p className="footer-subtitle">
-        在线简历网，是一家专业的<b>简历制作指导平台</b>。
+        简历魔法屋网，是一家专业的<b>简历制作指导平台</b>。
       </p>
       <p className="footer-subtitle">
         为求职者提供<b>简历制作、简历指导服务</b>,15分钟做出一份精美简历。
@@ -48,7 +47,10 @@ const AppFooter = memo((props) => {
       </div>
       {/* 版权模块 */}
       <div className="right">
-        ©2023 在线简历服务平台 | 豫ICP备2022009134号-1
+        ©2023 简历魔法屋 |
+        <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery">
+          豫ICP备2022009134号-3
+        </a>
       </div>
       {/* 底部链接模块 */}
       <div className="footer-link">

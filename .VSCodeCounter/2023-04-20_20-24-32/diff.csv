@@ -1,0 +1,108 @@
+"filename", "language", "JSON", "JavaScript", "Markdown", "Ignore", "HTML", "JavaScript JSX", "CSS", "comment", "blank", "total"
+"q:\React项目合集(已做)\onresume\.prettierignore", "Ignore", 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+"q:\React项目合集(已做)\onresume\.prettierrc", "JSON", 9, 0, 0, 0, 0, 0, 0, 0, 1, 10
+"q:\React项目合集(已做)\onresume\README.md", "Markdown", 0, 0, 43, 0, 0, 0, 0, 0, 19, 62
+"q:\React项目合集(已做)\onresume\craco.config.js", "JavaScript", 0, 22, 0, 0, 0, 0, 0, 2, 1, 25
+"q:\React项目合集(已做)\onresume\package-lock.json", "JSON", 32900, 0, 0, 0, 0, 0, 0, 0, 1, 32901
+"q:\React项目合集(已做)\onresume\package.json", "JSON", 76, 0, 0, 0, 0, 0, 0, 0, 1, 77
+"q:\React项目合集(已做)\onresume\public\index.html", "HTML", 0, 0, 0, 0, 19, 0, 0, 0, 1, 20
+"q:\React项目合集(已做)\onresume\src\App.css", "CSS", 0, 0, 0, 0, 0, 0, -7, 0, -2, -9
+"q:\React项目合集(已做)\onresume\src\App.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -1, 0, 0, 0, -1
+"q:\React项目合集(已做)\onresume\src\assets\css\base.css", "CSS", 0, 0, 0, 0, 0, 0, 7, 0, 0, 7
+"q:\React项目合集(已做)\onresume\src\assets\data\chatData.js", "JavaScript", 0, 249, 0, 0, 0, 0, 0, 0, 5, 254
+"q:\React项目合集(已做)\onresume\src\assets\data\resumeInfo copy.js", "JavaScript", 0, -53, 0, 0, 0, 0, 0, 0, -1, -54
+"q:\React项目合集(已做)\onresume\src\base-ui\Loading\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\base-ui\backTop\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\components\app-footer\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 3, 0, -1, 0, 2
+"q:\React项目合集(已做)\onresume\src\components\app-footer\style.js", "JavaScript", 0, 2, 0, 0, 0, 0, 0, 0, 0, 2
+"q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-logo\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 4, 0, 0, 1, 5
+"q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-logo\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-opts\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 16, 0, 2, 0, 18
+"q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-opts\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, -3, -3
+"q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-tabs\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 8, 0, 0, -1, 7
+"q:\React项目合集(已做)\onresume\src\components\app-header\c-cpns\header-tabs\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 1, -5, -4
+"q:\React项目合集(已做)\onresume\src\components\app-header\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 2, 0, 0, 1, 3
+"q:\React项目合集(已做)\onresume\src\components\log-form\c-cpns\input-item\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 9, 0, 0, 1, 10
+"q:\React项目合集(已做)\onresume\src\components\log-form\c-cpns\mobile-log\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 1, 0, -11, -1, -11
+"q:\React项目合集(已做)\onresume\src\components\log-form\c-cpns\pwd-item\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 9, 0, 0, 1, 10
+"q:\React项目合集(已做)\onresume\src\components\log-form\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 12, 0, 4, -1, 15
+"q:\React项目合集(已做)\onresume\src\components\order-list\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 163, 0, 3, 3, 169
+"q:\React项目合集(已做)\onresume\src\components\order-list\style.js", "JavaScript", 0, 25, 0, 0, 0, 0, 0, 0, 3, 28
+"q:\React项目合集(已做)\onresume\src\components\resume-bottomTab\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 129, 0, 3, 6, 138
+"q:\React项目合集(已做)\onresume\src\components\resume-bottomTab\style.js", "JavaScript", 0, 26, 0, 0, 0, 0, 0, 0, 2, 28
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\certificateHonor\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 2, 0, 0, 0, 2
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\job-intent\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -9, 0, 0, -3, -12
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-header\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 28, 0, 0, 3, 31
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-header\style.js", "JavaScript", 0, 61, 0, 0, 0, 0, 0, 0, 2, 63
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-title\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 12, 0, 0, -1, 11
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\resume-title\style.js", "JavaScript", 0, 97, 0, 0, 0, 0, 0, 0, 0, 97
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\selfEvaluation\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 1, 0, 0, 0, 1
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\skillSpecialties\style.js", "JavaScript", 0, -1, 0, 0, 0, 0, 0, 0, 0, -1
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\user-info\c-cpns\Avatar\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\user-info\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 91, 0, 0, 2, 93
+"q:\React项目合集(已做)\onresume\src\components\resume-info\c-cpns\user-info\style.js", "JavaScript", 0, 60, 0, 0, 0, 0, 0, 1, -1, 60
+"q:\React项目合集(已做)\onresume\src\components\resume-message\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -4, 0, 0, -1, -5
+"q:\React项目合集(已做)\onresume\src\components\resumeImg-item\style.js", "JavaScript", 0, -1, 0, 0, 0, 0, 0, 0, -1, -2
+"q:\React项目合集(已做)\onresume\src\hooks\useSocket.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 44, 0, 32, 13, 89
+"q:\React项目合集(已做)\onresume\src\hooks\useWebSocket.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 66, 0, 10, 13, 89
+"q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-charact\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-hotTemplate\c-cpns\hot-resume\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -4, 0, 0, 0, -4
+"q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-hotTemplate\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 4, 0, 0, 0, 4
+"q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-resumeImg\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-slide\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 4, 0, 4
+"q:\React项目合集(已做)\onresume\src\pages\home\c-cpns\home-slide\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\home\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 6, 0, 1, 0, 7
+"q:\React项目合集(已做)\onresume\src\pages\login\c-cpns\forget-pwd\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\login\c-cpns\forget-pwd\style.js", "JavaScript", 0, -5, 0, 0, 0, 0, 0, 0, 1, -4
+"q:\React项目合集(已做)\onresume\src\pages\login\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\my-order\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 12, 0, 0, -1, 11
+"q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\my-resume\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 5, 0, 0, 0, 5
+"q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\popularize\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 100, 0, 0, 1, 101
+"q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\popularize\style.js", "JavaScript", 0, 6, 0, 0, 0, 0, 0, 0, 3, 9
+"q:\React项目合集(已做)\onresume\src\pages\my\c-cpns\upload-template\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 47, 0, 0, 1, 48
+"q:\React项目合集(已做)\onresume\src\pages\register\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\register\style.js", "JavaScript", 0, -1, 0, 0, 0, 0, 0, 0, 0, -1
+"q:\React项目合集(已做)\onresume\src\pages\resume-bottomTab\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -132, 0, -16, -7, -155
+"q:\React项目合集(已做)\onresume\src\pages\resume-bottomTab\style.js", "JavaScript", 0, -26, 0, 0, 0, 0, 0, 0, -2, -28
+"q:\React项目合集(已做)\onresume\src\pages\resume-company\c-cards\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 67, 0, 0, 4, 71
+"q:\React项目合集(已做)\onresume\src\pages\resume-company\c-cards\style.js", "JavaScript", 0, 103, 0, 0, 0, 0, 0, 2, 11, 116
+"q:\React项目合集(已做)\onresume\src\pages\resume-company\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 15, 0, 0, 3, 18
+"q:\React项目合集(已做)\onresume\src\pages\resume-company\style.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, 0, 2, 7
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-helper\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -3, 0, 0, 0, -3
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-main\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 27, 0, 0, 0, 27
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-main\style.js", "JavaScript", 0, 7, 0, 0, 0, 0, 0, 0, -1, 6
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\basicInfoTab\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -2, 0, 0, 0, -2
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\basicInfoTab\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\certificateHonorTab\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\editor-inputs\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -1, 0, 0, -1, -2
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\projectExperienceTab\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-Editor\index copy.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 42, 0, 1, 2, 45
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-Editor\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, -7, 0, 0, 0, -7
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-date\index.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\c-cpns\tab-date\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 3, 0, 0, 1, 4
+"q:\React项目合集(已做)\onresume\src\pages\resume-details\c-cpns\resume-tabPanel\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-payCard\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 19, 0, 2, 1, 22
+"q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-order\c-cpns\order-steps\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 3, 0, 0, -1, 2
+"q:\React项目合集(已做)\onresume\src\pages\resume-service\c-cpns\s-team\style.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"q:\React项目合集(已做)\onresume\src\pages\resume-service\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 2, 0, 1, 0, 3
+"q:\React项目合集(已做)\onresume\src\pages\resume-service\style.js", "JavaScript", 0, -1, 0, 0, 0, 0, 0, 0, 0, -1
+"q:\React项目合集(已做)\onresume\src\pages\teacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 117, 0, 14, 2, 133
+"q:\React项目合集(已做)\onresume\src\pages\teacher\style.js", "JavaScript", 0, 8, 0, 0, 0, 0, 0, 2, 1, 11
+"q:\React项目合集(已做)\onresume\src\pages\template-list\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 46, 0, 0, 1, 47
+"q:\React项目合集(已做)\onresume\src\routers\index.js", "JavaScript", 0, 7, 0, 0, 0, 0, 0, 0, 0, 7
+"q:\React项目合集(已做)\onresume\src\services\index.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"q:\React项目合集(已做)\onresume\src\services\modules\login.js", "JavaScript", 0, 25, 0, 0, 0, 0, 0, 3, -1, 27
+"q:\React项目合集(已做)\onresume\src\services\modules\order.js", "JavaScript", 0, 6, 0, 0, 0, 0, 0, 1, 0, 7
+"q:\React项目合集(已做)\onresume\src\services\request\index.js", "JavaScript", 0, 33, 0, 0, 0, 0, 0, 3, -2, 34
+"q:\React项目合集(已做)\onresume\src\setupProxy.js", "JavaScript", 0, 18, 0, 0, 0, 0, 0, 0, 2, 20
+"q:\React项目合集(已做)\onresume\src\store\index.js", "JavaScript", 0, -2, 0, 0, 0, 0, 0, 0, 0, -2
+"q:\React项目合集(已做)\onresume\src\store\modules\code.js", "JavaScript", 0, -22, 0, 0, 0, 0, 0, 0, 0, -22
+"q:\React项目合集(已做)\onresume\src\store\modules\editResume.js", "JavaScript", 0, -1, 0, 0, 0, 0, 0, 0, 0, -1
+"q:\React项目合集(已做)\onresume\src\store\modules\login.js", "JavaScript", 0, 24, 0, 0, 0, 0, 0, -4, 1, 21
+"q:\React项目合集(已做)\onresume\src\store\modules\order.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, -1, 0, -1
+"q:\React项目合集(已做)\onresume\src\store\modules\register.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"q:\React项目合集(已做)\onresume\src\store\modules\resumeInfo.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, -3, 0, 2
+"q:\React项目合集(已做)\onresume\src\utils\auth.js", "JavaScript", 0, -2, 0, 0, 0, 0, 0, 0, 1, -1
+"q:\React项目合集(已做)\onresume\src\utils\exportPDF.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 2, 1, 3
+"q:\React项目合集(已做)\onresume\src\utils\setResumeTime.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, -8, -1, -9
+"Total", "-", 32985, 674, 43, 7, 19, 952, 0, 50, 91, 34821

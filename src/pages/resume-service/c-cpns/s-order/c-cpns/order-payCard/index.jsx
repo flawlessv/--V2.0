@@ -5,6 +5,8 @@ import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutli
 import { Button } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import Dialog from '@mui/material/Dialog'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
 import DialogActions from '@mui/material/DialogActions'
 import DialogContent from '@mui/material/DialogContent'
 import DialogContentText from '@mui/material/DialogContentText'
@@ -12,6 +14,7 @@ import DialogTitle from '@mui/material/DialogTitle'
 import { useRef } from 'react'
 import Snackbar from '@mui/material/Snackbar'
 import MuiAlert from '@mui/material/Alert'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { useState } from 'react'
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
@@ -22,6 +25,7 @@ const PayCard = memo((props) => {
   const [openRemake, setOpenRemake] = React.useState(false)
   const [open, setOpen] = React.useState(false)
   const [msg, setMsg] = useState('')
+  const [industry, setIndustry] = React.useState('')
   // 处理支付的函数
   const handleClick = (value) => {
     setMsg(value)
@@ -48,9 +52,11 @@ const PayCard = memo((props) => {
     handleClick('添加备注成功~')
 
     setOpenRemake(false)
-    getRemake(remakeRef.current.value)
+    getRemake(remakeRef.current.value,industry)
   }
-
+  const industryData=['全部','技术/产品/设计/运营','市场/人事/财务/行政','高级管理','销售/传媒/金融','教育培训/医疗健康',
+'采购/贸易供应链/物流','房地产','农/林/牧/渔','咨询/法律/翻译','旅游/服务业/生产制造'
+]
   return (
     <Paywrapper>
       <div className="card">
@@ -87,6 +93,7 @@ const PayCard = memo((props) => {
                 <DialogContentText>
                   为你的订单添加备注,以让简历规划师明白您的需求
                 </DialogContentText>
+                {/* 添加备注 */}
                 <TextField
                   autoFocus
                   margin="dense"
@@ -97,6 +104,21 @@ const PayCard = memo((props) => {
                   variant="standard"
                   inputRef={remakeRef}
                 />
+                {/* 选择产业类型 */}
+                <InputLabel id="demo-select-small-label">产业类型</InputLabel>
+                <Select
+                  labelId="demo-select-small-label"
+                  id="demo-select-small"
+                  value={industry}
+                  label="产业类型"
+                  onChange={(e) => setIndustry(e.target.value)
+                  }
+                  sx={{width:'370px',mt:'2'}}
+
+                >
+                  {industryData.map(item=><MenuItem value={item} key={item}>{item}</MenuItem>)}
+                
+                </Select>
               </DialogContent>
               <DialogActions>
                 <Button onClick={handleCancel}>取消</Button>

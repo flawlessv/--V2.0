@@ -5,6 +5,8 @@ import Soptimize from './c-cpns/s-optimize'
 import SorderDialog from './c-cpns/s-order'
 import Sstep from './c-cpns/s-step'
 import Steam from './c-cpns/s-team'
+// import AppFooter from '@components/app-footer'
+import AppFooter from '../../components/app-footer'
 import { RServiceWrapper } from './style'
 const ResumeService = memo(() => {
   return (
@@ -15,6 +17,7 @@ const ResumeService = memo(() => {
       <Scase></Scase>
       <Sstep> </Sstep>
       <SorderDialog></SorderDialog>
+      <AppFooter></AppFooter>
     </RServiceWrapper>
   )
 })

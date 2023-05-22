@@ -20,7 +20,15 @@ const TabEditor = memo((props) => {
           wrapperClassName="wrapperClassName"
           editorClassName="editorClassName"
           editorState={editorState}
+          defaultContentState={'qweqeqweqwe'}
           onEditorStateChange={(val) => setEditorState(val)}
+          toolbar={{
+            inline: { inDropdown: true },
+            list: { inDropdown: true },
+            textAlign: { inDropdown: true },
+            link: { inDropdown: true },
+            history: { inDropdown: true }
+          }}
           // 失去焦点之后，就能够获取到转化成HTML的数据
           onBlur={() =>
             handleResumeEditorContent(

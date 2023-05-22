@@ -68,12 +68,13 @@ const resumeInfoSlice = createSlice({
         posts: '总经理',
         startTime: '2022-2-2'
       }
-    }
+    },
+    templateId:2
   },
   reducers: {
-    // getuserInfo(state, { payload }) {
-    //     state.resumeData.resumeDatacodeImg = payload
-    // },
+    setTemplateId(state, { payload }) {
+      state.templateId= payload
+    },
     setBaseInfo(state, { payload }) {
       state.resumeData.baseInfo = payload
     },
@@ -150,6 +151,7 @@ const resumeInfoSlice = createSlice({
   }
 })
 export const {
+  setTemplateId,
   setBaseInfo,
   setJobIntent,
   setWorkExpeInfo,

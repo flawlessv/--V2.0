@@ -9,7 +9,7 @@ import FormControl from '@mui/material/FormControl'
 import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
 import MuiAlert from '@mui/material/Alert'
-import md5 from 'blueimp-md5'
+import md5 from 'md5'
 import { useNavigate } from 'react-router-dom'
 import ForgetDialog from '@/pages/login/c-cpns/forget-pwd'
 import {
@@ -21,7 +21,7 @@ import {
 import InputItem from './c-cpns/input-item'
 import PwdItem from './c-cpns/pwd-item'
 import { useDispatch, useSelector } from 'react-redux'
-import { setUserInfo } from '../../store/modules/code'
+import { setIsLogin, setUserInfo } from '../../store/modules/login'
 import { setToken } from '@/utils/auth.js'
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
@@ -45,11 +45,11 @@ const LogForm = memo((props) => {
   useEffect(() => {
     if (btnSecond === 0) {
       clearInterval(timerRef.current) // 清空定时器
-      setBtnSecond(timerCount) // 重新将技术器设置为60秒
+      setBtnSecond(timerCount) // 重新将计数器设置为60秒
     }
   }, [btnSecond])
   // 图片验证码的图片
-  const { codeImg } = useSelector((state) => ({ codeImg: state.code.codeImg }))
+  const { codeImg } = useSelector((state) => ({ codeImg: state.login.codeImg }))
 
   //验证表单的正则表达式
   const regs = {
@@ -87,6 +87,7 @@ const LogForm = memo((props) => {
   const handleGetValidCode = async () => {
     const mobile = phoneRef.current.value
     if (regs.reg_tel.test(mobile)) {
+       //执行倒计时函数
       cutCount()
       timerRef.current = setInterval(cutCount, 1000)
       const res = await getMobileCode(mobile)
@@ -132,30 +133,34 @@ const LogForm = memo((props) => {
         code: msgCode
       })
     }
-    console.log(res, 'rrrrrrrrrrrrrrrrrrr')
     // 用户注册
     if (title === '注册') {
-      res = await registerByMobile({
+      const register={
         mobile: phoneRef.current.value,
         code: msgCodeRef.current.value,
         username: userRef.current.value,
-        password: pwdRef.current.value
-      })
+        password: md5(pwdRef.current.value)
+      }
+      console.log(register);
+      res = await registerByMobile(register)
       console.log(res, 'zhuce')
     }
     //判断是否操作成功
     if (res.code === 200) {
       setAlertMsg({ msg: res.msg, success: true })
       if (title !== '注册') {
+        //设置token
         const accessToken = res.data.accessToken
         const refreshToken = res.data.refreshToken
         setToken('access_token', accessToken)
         setToken('refresh_token', refreshToken)
-        console.log(res.data,'登录过后的data');
+        console.log(res.data, '登录过后的data')
+        //改变登录状态，把用户信息存在redux中
         dispatch(setUserInfo(res.data))
-        setTimeout(()=>{
+        dispatch(setIsLogin(true))
+        setTimeout(() => {
           navigate('/')
-        },500)
+        }, 500)
       }
     } else if (res.code === 400) {
       setAlertMsg({ msg: res.msg, success: true })
