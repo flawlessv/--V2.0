@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 
 const ResumeHeader = memo(() => {
   const params = useParams()
-  console.log()
   return (
     <ResumeHeaderWrapper>
       {params.id === '2' && (

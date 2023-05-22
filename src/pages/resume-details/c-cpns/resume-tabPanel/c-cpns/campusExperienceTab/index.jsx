@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { CampusWrapper } from './style'
 import TextField from '@mui/material/TextField'
 import { DatePicker } from 'antd'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import TabEditor from '../tab-Editor'
 import {
   setCampusExperienceContent,
@@ -20,6 +20,11 @@ const ProjectExperience = memo((props) => {
     dispatch(setCampusExperienceStartTime(startTime))
     dispatch(setCampusExperienceEndTime(endTime))
   }
+  const {
+    campusExperience: { experienceName, role }
+  } = useSelector((state) => ({
+    campusExperience: state.resume.resumeData.campusExperience
+  }))
   return (
     <CampusWrapper>
       <TextField
@@ -29,12 +34,14 @@ const ProjectExperience = memo((props) => {
         sx={{ marginRight: '10px' }}
         size="small"
         onChange={(e) => dispatch(setCampusExperienceName(e.target.value))}
+        defaultValue={experienceName}
       />
       <TextField
         id="outlined-basic"
         label="角色"
         variant="outlined"
         size="small"
+        defaultValue={role}
         sx={{ marginRight: '10px' }}
         onChange={(e) => dispatch(setCampusExperienceRole(e.target.value))}
       />
@@ -42,7 +49,11 @@ const ProjectExperience = memo((props) => {
         placeholder={['开始时间', '结束时间']}
         onChange={(_, dataString) => handleChangeTime(dataString)}
       />
-      <TabEditor fn={setCampusExperienceContent}></TabEditor>
+      <TabEditor
+        fn={setCampusExperienceContent}
+        label="campusExperience"
+      ></TabEditor>
+      {/* <ResumeEdtior /> */}
     </CampusWrapper>
   )
 })

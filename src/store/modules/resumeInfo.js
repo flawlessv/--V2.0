@@ -48,7 +48,7 @@ const resumeInfoSlice = createSlice({
       },
       projectExperience: {
         content:
-          '网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐',
+          '<ul><li><strong>项目介绍</strong></li></ul><p>　　　该平台为学院工作室项目，<strong>前端由我一人从0到1独立开发</strong>。一共由<strong>十几个前端页面</strong>组成，用户可在该平台<strong>挑选简历模板</strong>、在线<strong>编辑简历</strong>、下载简历，也可以<strong>在线咨询简历服务师</strong>来指导代写、优化简历等服务。<a href="http://onlyfufu.top/" rel="noopener noreferrer" target="_blank">项目上线链接</a></p><ul><li><strong>技术栈</strong></li></ul><p>　　　<strong>前端</strong>：React18+Axios+Mui+Antd+Reduxjs/toolkit+Websocket+styled-components</p><p>　　　<strong>后端</strong>：SpringCloudAlibaba+SpringBoot +Nacos+Seata+Gateway+Sentinel+Mybatis-plus+Redis</p><ul><li><strong>项目功能</strong></li></ul><p><strong>          登录/注册</strong>：<strong>二次封装Form,Input</strong>等组件实现了注册及三种登录方式的UI，使用<strong>双token</strong>进行身份验证实现<strong>无感刷新</strong></p><p><strong>          编辑简历</strong>：统一封装UI组件input或makedown输入框，监听其变化并dispatch到store中，使<strong>用户可在线编辑简历</strong>并在其选择的模板上<strong>实时显示简历编辑内容</strong></p><p><strong>          简历服务：</strong>用户可在线选择服务的类型与不同的简历服务师，下单后即可<strong>通过聊天框在线与简历服务师交流，</strong>在我的页面也可<strong>修改、删除、评价</strong>订单</p><p>　　\t <strong>上传简历模板</strong>：用户可以上传自己喜欢的模板<strong>供别人使用</strong>，并且从中获取收益。</p><ul><li><strong>项目特点</strong></li></ul><p>　　　　使用CSS in JS实现<strong>CSS模块化</strong>，<strong>组件抽离及其细致化</strong>，项目目录划分清晰代码规范，使用路由表<strong>统一管理路由</strong></p><p>　　　　Websocket使用<strong>心跳机制</strong>，二次封装Axios﻿﻿对项目中所有用到<strong>网络请求的函数进行统一管理</strong></p><p>　　　　首页通过使用<strong>图片、路由懒加载</strong>使首屏渲染时间<strong>缩短约60%</strong>，简历模板使用<strong>虚拟列表</strong>渲染</p><p>　　　　组件通过<strong>memo</strong>包裹并使用useCallback，useMemo等hooks使组件实现<strong>最小原子渲染</strong>　　　</p>',
         endTime: '2023-3-1',
         projectName: '网易云音乐',
         role: '前端工程师',
@@ -69,11 +69,11 @@ const resumeInfoSlice = createSlice({
         startTime: '2022-2-2'
       }
     },
-    templateId:2
+    templateId: 2
   },
   reducers: {
     setTemplateId(state, { payload }) {
-      state.templateId= payload
+      state.templateId = payload
     },
     setBaseInfo(state, { payload }) {
       state.resumeData.baseInfo = payload

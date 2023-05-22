@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter,HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import store from './store'
@@ -12,7 +12,7 @@ import App from '@/App'
 import Loading from './base-ui/Loading'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <Suspense fallback={<Loading />}>
@@ -20,5 +20,5 @@ root.render(
         </Suspense>
       </Provider>
     </ThemeProvider>
-  </BrowserRouter>
+  </HashRouter>
 )

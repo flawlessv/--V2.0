@@ -75,7 +75,7 @@ const Home = memo(() => {
   // console.log(time)
   useEffect(() => {
     let time2 = Date.now()
-    console.log(time2 - time)
+    console.log(time2 - time,'首页加载时间')
     dispatch(fetchUserInfoAction())
   }, [dispatch,time])
   return (

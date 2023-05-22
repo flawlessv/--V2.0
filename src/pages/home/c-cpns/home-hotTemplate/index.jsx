@@ -14,9 +14,7 @@ const HotTemplate = memo((props) => {
           <p>12种颜色任意调配，12种模块自由组合，6种语言可选</p>
         </div>
         <div className="re-template">
-          {new Array(8).fill(0).map((_, index) => {
-            console.log(index);
-            
+          {new Array(8).fill(0).map((_, index) => {            
             return <HotResume key={index} />
           }
 )}

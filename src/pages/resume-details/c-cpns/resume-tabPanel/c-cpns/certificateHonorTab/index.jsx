@@ -4,7 +4,7 @@ import TabEditor from '../tab-Editor'
 const CertificateHonor = memo((props) => {
   return (
     <div>
-      <TabEditor fn={setCertificateHonor} />
+      <TabEditor fn={setCertificateHonor} label='certificateHonor'/>
     </div>
   )
 })

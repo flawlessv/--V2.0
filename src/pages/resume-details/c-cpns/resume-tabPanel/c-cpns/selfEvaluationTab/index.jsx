@@ -4,7 +4,7 @@ import TabEditor from '../tab-Editor'
 const SelfEvaluation = memo((props) => {
   return (
     <div>
-      <TabEditor fn={setSelfEvaluation} />
+      <TabEditor fn={setSelfEvaluation} label='selfEvaluation'/>
     </div>
   )
 })

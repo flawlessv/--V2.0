@@ -5,7 +5,7 @@ import TabEditor from '../tab-Editor'
 const SkillSpecialties = memo((props) => {
   return (
     <div>
-      <TabEditor fn={setSkillSpecialties}></TabEditor>
+      <TabEditor fn={setSkillSpecialties} label='skillSpecialties'></TabEditor>
     </div>
   )
 })
